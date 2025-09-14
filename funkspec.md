@@ -133,6 +133,41 @@
 
 - A rendszer támogatja a különböző tanulási szinteket és nyelvi témaköröket, így minden diák a saját tempójában haladhat.
 
+## Használati esetek
+
+#### ADMIN szerepkör
+
+- Az Admin bármely más szerepkörbe beléphet, hogy ellenőrizze a rendszer hibamentes működését.
+
+- Felelős a rendszer problémamentes üzemeltetéséért és karbantartásáért.
+
+- Teljes hozzáféréssel rendelkezik az alkalmazás minden funkciójához és adatához.
+
+- Hozzáfér a felhasználók listájához, ahol módosíthatja a profiladatokat (felhasználónév, jelszó, szerepkör, jogosultságok).
+
+- Új felhasználókat tud regisztrálni, valamint törölni a rendszerből.
+
+- Képes új nyelvi kvízkérdéseket és feladatokat létrehozni, hasonlóan a tanárokhoz.
+
+- Üzenetet küldhet egyes felhasználóknak vagy globális értesítést az összes felhasználónak egyszerre.
+
+- A diákok eredményeit és pontszámait csak az Admin tudja módosítani, miután a Tanár értékelést adott.
+
+#### DIÁK szerepkör
+
+- A Diák feladata a rendszerben elérhető nyelvi kvízek és feladatok kitöltése.
+
+- Regisztráció után saját profillal rendelkezik, amely tartalmazza az eredményeit, pontszámait és toplistás helyezését.
+
+- Azonnali visszajelzést kap a kitöltött feladatokra, így azonnal láthatja az eredményt és a helyes megoldásokat.
+
+- Gyakorolhat különböző nehézségi szinteken, így a saját tudásszintjének megfelelő feladatokat választhatja.
+
+- Nyomon követheti saját fejlődését statisztikák és teljesítményriportok segítségével.
+
+- Részt vehet pontgyűjtő és toplistás versenyben, amely motiválja a folyamatos tanulásra.
+
+- Hozzáfér a feladott leckékhez és bármikor újra megoldhatja a gyakorló kvízeket.
 
 ## Fogalomtár
 
