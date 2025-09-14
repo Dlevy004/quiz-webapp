@@ -113,7 +113,6 @@
 
 - A rendszer admin felülettel rendelkezik, ahol az admin új kvízkérdéseket és feladatokat tölthet fel.
 
-
 ## Fogalomtár
 
 - Adminisztrátor:
@@ -155,66 +154,62 @@ A felhasználói felület kétféle megjelenítési stílusa, amely a felhaszná
 - Vizuális visszajelzés:
 Azonnali grafikus jelzés a válasz helyességéről (pl. helyes válasz: zöld, hibás válasz: piros).
 
-
-.
-
 ## Szabad riport – A rendszer elvárt működése
 
 A rendszer célja egy szórakoztató, motiváló és könnyen kezelhető nyelvi kvíz alkalmazás biztosítása, amely elősegíti az angol–magyar szókincs fejlesztését. Az alábbiakban bemutatjuk a rendszer működését a felhasználói folyamatok alapján.
 
-1. Bejelentkezés és kezdőfelület
+### 1. Bejelentkezés és kezdőfelület
 
-A felhasználó a kezdőlapon egy egyszerű bejelentkezési felületet lát, ahol egy választott felhasználónév megadásával léphet be a rendszerbe. A bejelentkezés után a rendszer a felhasználóhoz rendeli a későbbi eredményeket és statisztikákat.
-A kezdőképernyőn a felhasználó választhat:
-- új kvíz indítása,
-- korábbi eredmények megtekintése,
-- beállítások (sötét/világos mód, nyelvi beállítások).
+- A felhasználó a kezdőlapon egy egyszerű bejelentkezési felületet lát, ahol egy választott felhasználónév megadásával léphet be a rendszerbe.
+- A bejelentkezés után a rendszer a felhasználóhoz rendeli a későbbi eredményeket és statisztikákat.
+- A kezdőképernyőn a felhasználó választhat:
+  - új kvíz indítása,
+  - korábbi eredmények megtekintése,
+  - beállítások (sötét/világos mód, nyelvi beállítások).
 
-2. Kvíz indítása
+### 2. Kvíz indítása
 
-Új kvíz indításakor a felhasználó kiválaszthatja a nehézségi szintet (alap, középhaladó, haladó). Ezután a rendszer automatikusan létrehoz egy kérdéssort, amelyben a kérdések iránya (angol → magyar vagy magyar → angol) véletlenszerűen kerül kijelölésre.
-A kvíz megkezdésekor:
-- elindul az időmérő,
-- a képernyő tetején megjelenik a progress bar, amely mutatja, hány kérdésből áll a feladatsor és hol tart a felhasználó.
+- Új kvíz indításakor a felhasználó kiválaszthatja a nehézségi szintet (alap, középhaladó, haladó).
+- Ezután a rendszer automatikusan létrehoz egy kérdéssort, amelyben a kérdések iránya (angol → magyar vagy magyar → angol) véletlenszerűen kerül kijelölésre.
+- A kvíz megkezdésekor:
+  - elindul az időmérő,
+  - a képernyő tetején megjelenik a progress bar, amely mutatja, hány kérdésből áll a feladatsor és hol tart a felhasználó.
 
-3. Kérdések megválaszolása
+### 3. Kérdések megválaszolása
 
-A felhasználó egy kérdést lát a képernyőn, alatta pedig több lehetséges választ. A kiválasztás után:
-- a rendszer azonnali vizuális visszajelzést ad:
+- A felhasználó egy kérdést lát a képernyőn, alatta pedig több lehetséges választ. A kiválasztás után:
+  - a rendszer azonnali vizuális visszajelzést ad:
     - helyes válasz esetén zöld színű kiemelést,
     - helytelen válasz esetén piros színű jelzést, valamint megjeleníti a helyes megoldást.
-- az időmérő tovább számol, de a hibázás nem állítja meg a játékot.
+  - az időmérő tovább számol, de a hibázás nem állítja meg a játékot.
+- A felhasználó továbbléphet a következő kérdésre, amíg a teljes kvízt ki nem tölti.
 
-A felhasználó továbbléphet a következő kérdésre, amíg a teljes kvízt ki nem tölti.
+### 4. Kvíz befejezése és eredmény
 
-4. Kvíz befejezése és eredmény
+- A kvíz végén a rendszer összesítést készít:
+  - a felhasználó által elért pontszám,
+  - a helyes válaszok száma és aránya,
+  - a kvíz teljes kitöltési ideje.
+- Ezek az adatok elektronikus naplóban rögzítésre kerülnek, így a felhasználó bármikor visszanézheti a teljesítményét.
 
-A kvíz végén a rendszer összesítést készít:
-- a felhasználó által elért pontszám,
-- a helyes válaszok száma és aránya,
-- a kvíz teljes kitöltési ideje.
+### 5. Eredmények nyomon követése
 
-Ezek az adatok elektronikus naplóban rögzítésre kerülnek, így a felhasználó bármikor visszanézheti a teljesítményét.
+- A felhasználó a „Eredményeim” menüpontban visszanézheti a korábbi kvízek adatait.
+- Az eredmények megjelennek:
+  - időrendben listázva,
+  - statisztikai formában (pl. helyes válaszok aránya, fejlődési grafikon).
+  - Emellett a rendszer egy toplistát is vezet, amelyben a felhasználók teljesítménye összehasonlítható. Ez motiválja a tanulókat a rendszeres gyakorlásra.
 
-5. Eredmények nyomon követése
+### 6. Adminisztráció
 
-A felhasználó a „Eredményeim” menüpontban visszanézheti a korábbi kvízek adatait.
-Az eredmények megjelennek:
-- időrendben listázva,
-- statisztikai formában (pl. helyes válaszok aránya, fejlődési grafikon).
-- Emellett a rendszer egy toplistát is vezet, amelyben a felhasználók teljesítménye összehasonlítható. Ez motiválja a tanulókat a rendszeres gyakorlásra.
+- Az adminisztrátor külön belépési felületen éri el az admin modult, ahol:
+  - új kérdéseket adhat hozzá,
+  - módosíthatja vagy törölheti a meglévőket,
+  - statisztikai riportokat tekinthet meg (pl. mely kérdések okozzák a legtöbb hibát).
+- Az admin által feltöltött kérdések azonnal bekerülnek a kvízek adatbázisába, így a felhasználók friss tartalommal gyakorolhatnak.
 
-6. Adminisztráció
+### 7. Felhasználói élmény
 
-Az adminisztrátor külön belépési felületen éri el az admin modult, ahol:
-- új kérdéseket adhat hozzá,
-- módosíthatja vagy törölheti a meglévőket,
-- statisztikai riportokat tekinthet meg (pl. mely kérdések okozzák a legtöbb hibát).
-
-Az admin által feltöltött kérdések azonnal bekerülnek a kvízek adatbázisába, így a felhasználók friss tartalommal gyakorolhatnak.
-
-7. Felhasználói élmény
-
-A rendszer reszponzív kialakítással rendelkezik, így bármilyen eszközön (asztali gép, tablet, mobil) kényelmesen használható.
-A felhasználó beállíthatja, hogy világos vagy sötét módban szeretné használni az alkalmazást.
-A játékos elemek (pontozás, időmérő, progress bar, toplista) segítik a tanulók motivációját és biztosítják, hogy a tanulás ne csak hasznos, hanem szórakoztató is legyen.
+- A rendszer reszponzív kialakítással rendelkezik, így bármilyen eszközön (asztali gép, tablet, mobil) kényelmesen használható.
+- A felhasználó beállíthatja, hogy világos vagy sötét módban szeretné használni az alkalmazást.
+- A játékos elemek (pontozás, időmérő, progress bar, toplista) segítik a tanulók motivációját és biztosítják, hogy a tanulás ne csak hasznos, hanem szórakoztató is legyen.
