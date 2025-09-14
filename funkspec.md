@@ -29,3 +29,21 @@
 - A projekt fejlesztése során hangsúlyt kap a korszerű munkaszervezés és eszközhasználat. A kódkezeléshez Git és GitHub verziókövetőt alkalmazunk, a feladatok menedzseléséhez pedig Trellót, ami lehetővé teszi a csapatmunka hatékony koordinálását és a kódverziók ellenőrzött kezelését. A dokumentáció markdown formátumban készül, amely átlátható és könnyen karbantartható.
 
 - Végső soron az alkalmazás célja, hogy egy minőségi, élvezetes és magas hatékonyságú nyelvtanulási segédeszközzé váljon, amely pozitív hatással van a felhasználók nyelvtudására és tanulási szokásaira, és technikailag is korszerű megoldásokat nyújt.
+
+## Igényelt üzleti folyamatok
+
+- A program célja, hogy játékos és interaktív módon segítse a diákok nyelvtanulását a modern digitális környezetben.
+
+- Az adminisztrátornak elegendő egyszer feltölteni a feladatsort a rendszerbe, megadni a helyes válaszokat és beállítani a kvíz paramétereit (pl. időkorlát, pontozás), így a későbbi feladatkezelés egyszerű és gyors.
+
+- A rendszer automatikusan értékeli a kvízeket, így nem szükséges minden feladatot kézzel átnézni vagy pontozni, ami jelentős időmegtakarítást biztosít.
+
+- A diákok a teszt kitöltése után azonnal láthatják az eredményüket, valamint visszajelzést kapnak a hibás válaszokra, így azonnal tanulhatnak a saját hibáikból.
+
+- A feladatokhoz tartozó statisztikák és toplisták motiválják a tanulókat, és lehetővé teszik a saját teljesítmény másokkal való összehasonlítását.
+
+- A tanulás egyszerű és kényelmes, mivel a diákok bármikor előkereshetik a feladott leckéket, gyakorolhatják azokat, és azonnal ellenőrizhetik magukat.
+
+- Nem kell könyveket vagy tankönyvi fejezeteket lapozgatni, minden tananyag és kvíz online, könnyen hozzáférhető.
+
+- A rendszer támogatja a különböző tanulási szinteket és nyelvi témaköröket, így minden diák a saját tempójában haladhat.
