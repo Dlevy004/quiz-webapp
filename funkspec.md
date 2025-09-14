@@ -298,10 +298,10 @@ Fő folyamat:
 
 
 Alternatív folyamatok:
-    - Hibás bejelentkezés: ha a felhasználónév nem megfelelő, a rendszer hibaüzenetet küld, és nem enged belépni.
-    - Kvíz megszakítása: a felhasználó bármikor kiléphet, ekkor a rendszer nem menti az eredményt.
+- Hibás bejelentkezés: ha a felhasználónév nem megfelelő, a rendszer hibaüzenetet küld, és nem enged belépni.
+- Kvíz megszakítása: a felhasználó bármikor kiléphet, ekkor a rendszer nem menti az eredményt.
 
 
 Utófeltételek:
-    - A felhasználó eredménye rögzítve van az Elektronikus Naplóban.
-    - A toplista (ha van) frissül az új pontszám alapján.
+- A felhasználó eredménye rögzítve van az Elektronikus Naplóban.
+- A toplista (ha van) frissül az új pontszám alapján.
