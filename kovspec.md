@@ -28,21 +28,21 @@
 
 - A mai angol nyelvtanulás során a hallgatók gyakran unalmas és statikus módszerekkel tanulnak szavakat és kifejezéseket, például jegyzetekből vagy nyomtatott listákból, amelyek a motiváció csökkentéséhez és a tudás megszerzésének nehézségéhez vezethetnek. A mi alkalmazásunk ezekre a problémákra kínál megoldást:
 
-    - A tanulók nem kapnak azonnali visszajelzést a válaszaikról, így nem tudják, hol hibáztak vagy mit kellene jobban átismételniük. A mi alkalmazásunk azonnali visszajelzést ad, ami segíti a felhasználókat a tanulási folyamatban.
+  - A tanulók nem kapnak azonnali visszajelzést a válaszaikról, így nem tudják, hol hibáztak vagy mit kellene jobban átismételniük. A mi alkalmazásunk azonnali visszajelzést ad, ami segíti a felhasználókat a tanulási folyamatban.
 
-    - A meglévő nyelvi alkalmazások sokszor nem rugalmasak: nem teszik lehetővé a kétirányú gyakorlást. Emellett az eredmények nyomon követése és a fejlődés vizualizálása hiányzik, ami csökkenti a tanulók motivációját.
+  - A meglévő nyelvi alkalmazások sokszor nem rugalmasak: nem teszik lehetővé a kétirányú gyakorlást. Emellett az eredmények nyomon követése és a fejlődés vizualizálása hiányzik, ami csökkenti a tanulók motivációját.
 
-    - Nehéz felmérni a megszerzett szókincset anélkül, hogy bonyolult teszteket kellene kitölteni. Egy egyszerű kvíz gyors és hatékony módja a tudásfelmérésnek.
+  - Nehéz felmérni a megszerzett szókincset anélkül, hogy bonyolult teszteket kellene kitölteni. Egy egyszerű kvíz gyors és hatékony módja a tudásfelmérésnek.
 
-    - A diákok gyakran nem kapnak lehetőséget a saját szókincsük szintjének megfelelő nehézségű feladatok gyakorlására. A rendszerünk nehézségi szintek szerint kínál kvízeket, így mindenki a saját tudásszintjének megfelelő kihívást találhat.
+  - A diákok gyakran nem kapnak lehetőséget a saját szókincsük szintjének megfelelő nehézségű feladatok gyakorlására. A rendszerünk nehézségi szintek szerint kínál kvízeket, így mindenki a saját tudásszintjének megfelelő kihívást találhat.
 
-    - A jelenlegi nyelvi gyakorló eszközök ritkán tartalmaznak játékos elemeket vagy motivációs eszközöket (pontozás, toplista, visszaszámláló), pedig ezek növelik az elköteleződést és a rendszeres tanulást.
+  - A jelenlegi nyelvi gyakorló eszközök ritkán tartalmaznak játékos elemeket vagy motivációs eszközöket (pontozás, toplista, visszaszámláló), pedig ezek növelik az elköteleződést és a rendszeres tanulást.
 
-    - Sok esetben nincs lehetőség a haladás nyomon követésére és az eredmények megosztására másokkal, ami csökkenti a közösségi és versenyszerű tanulás élményét.
+  - Sok esetben nincs lehetőség a haladás nyomon követésére és az eredmények megosztására másokkal, ami csökkenti a közösségi és versenyszerű tanulás élményét.
 
-    - A szókincsfejlesztő eszközök sokszor csak szöveges alapon működnek, figyelmen kívül hagyva a vizuális tanulók igényeit. A rendszerünk képekkel is támogatná a szavak jelentésének megerősítését, ami segít a szavak könnyebb megjegyzésében.
+  - A szókincsfejlesztő eszközök sokszor csak szöveges alapon működnek, figyelmen kívül hagyva a vizuális tanulók igényeit. A rendszerünk képekkel is támogatná a szavak jelentésének megerősítését, ami segít a szavak könnyebb megjegyzésében.
 
-    - Webalkalmazásunk segítségével a felhasználó a saját idejében és a saját érdeklődési körének megfelelő nehézségi szinten gyakorolhat.
+  - Webalkalmazásunk segítségével a felhasználó a saját idejében és a saját érdeklődési körének megfelelő nehézségi szinten gyakorolhat.
 
 ## Követelménylista
 
