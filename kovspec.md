@@ -1,8 +1,6 @@
 # Követelmény Specifikáció
 
-## Levente:
-
-### Áttekintés
+## Áttekintés
 
 - Az alkalmazás célja egy interaktív kvízfelület létrehozása, amely az angol és magyar szókincs fejlesztését teszi lehetővé, mindezt játékos formában.
 
@@ -26,7 +24,7 @@
 
 - A cél egy könnyen kezelhető, szórakoztató és motiváló nyelvi quiz alkalmazás létrehozása, amely minőségi felhasználói élményt nyújt.
 
-### Jelenlegi helyzet
+## Jelenlegi helyzet
 
 - A mai angol nyelvtanulás során a hallgatók gyakran unalmas és statikus módszerekkel tanulnak szavakat és kifejezéseket, például jegyzetekből vagy nyomtatott listákból, amelyek a motiváció csökkentéséhez és a tudás megszerzésének nehézségéhez vezethetnek. A mi alkalmazásunk ezekre a problémákra kínál megoldást:
 
@@ -46,9 +44,7 @@
 
     - Webalkalmazásunk segítségével a felhasználó a saját idejében és a saját érdeklődési körének megfelelő nehézségi szinten gyakorolhat.
 
-## András:
-
-### Követelménylista
+## Követelménylista
 
 | Modul        |  ID  | Név                     |  v. | Kifejtés |
 |--------------|------|------------------------ |-----|----------|
@@ -65,7 +61,7 @@
 | Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A webes alkalmazás reszponzív, így asztali gépen, mobilon és tableten egyaránt használható.|
 | Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók belépnek a felületre.|
 
-### Jelenlegi üzleti folyamatok modellje
+## Jelenlegi üzleti folyamatok modellje
 
 - A hagyományos oktatás elavult és passzív.
 
@@ -97,7 +93,7 @@
 
 - A jelenlegi modell merev és rugalmatlan, ami akadályozza a hatékony tudásszerzést.
 
-### Vágyálom rendszer
+## Vágyálom rendszer
 
 - A projekt célja egy olyan rendszer, amely játékos formában segíti a nyelvtanulást és gyakorlást.
 
