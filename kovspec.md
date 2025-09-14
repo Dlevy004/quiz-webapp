@@ -143,6 +143,9 @@ A kvízek kitöltése során elért teljesítménymutató, amely a helyes válas
 - Progress bar:
 Grafikus elem, amely a kvíz előrehaladását vizuálisan jelzi.
 
+- Toplista:
+A felhasználók rangsora az elért pontszámok alapján, amely ösztönzi a versenyt és motivációt biztosít.
+
 - Reszponzív kialakítás:
 Az alkalmazás olyan megjelenési formája, amely különböző eszközökön (mobil, tablet, asztali gép) is megfelelően működik és kényelmesen használható.
 
@@ -199,6 +202,7 @@ A felhasználó a „Eredményeim” menüpontban visszanézheti a korábbi kví
 Az eredmények megjelennek:
 - időrendben listázva,
 - statisztikai formában (pl. helyes válaszok aránya, fejlődési grafikon).
+- Emellett a rendszer egy toplistát is vezet, amelyben a felhasználók teljesítménye összehasonlítható. Ez motiválja a tanulókat a rendszeres gyakorlásra.
 
 6. Adminisztráció
 
