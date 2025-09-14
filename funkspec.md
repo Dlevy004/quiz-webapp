@@ -299,7 +299,6 @@ Fő folyamat:
 
 Alternatív folyamatok:
     - Hibás bejelentkezés: ha a felhasználónév nem megfelelő, a rendszer hibaüzenetet küld, és nem enged belépni.
-    - Időkorlát lejár: ha a felhasználó nem válaszol időben, a rendszer automatikusan továbblép a következő kérdésre, és a válasz hibásnak számít.
     - Kvíz megszakítása: a felhasználó bármikor kiléphet, ekkor a rendszer nem menti az eredményt.
 
 
