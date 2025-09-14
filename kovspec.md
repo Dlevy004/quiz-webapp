@@ -96,3 +96,23 @@
 - A diákok nem tanulnak meg alkalmazkodni a gyorsan változó világhoz.
 
 - A jelenlegi modell merev és rugalmatlan, ami akadályozza a hatékony tudásszerzést.
+
+### Vágyálom rendszer
+
+- A projekt célja egy olyan rendszer, amely játékos formában segíti a nyelvtanulást és gyakorlást.
+
+- A rendszer több platformon elérhető: weben és androidos alkalmazásként.
+
+- Regisztráció után a felhasználó különböző kvíz- és feladattípusok közül választhat.
+
+- A program színes, látványos felülettel rendelkezik, hogy motiválja és lekösse a tanulókat.
+
+- A feladatok játékos elemeket tartalmaznak, ezzel élvezetesebbé téve a nyelvtanulást.
+
+- A rendszer tárolja a felhasználók teljesítményét (pl. toplista), így lehetőség nyílik másokkal való összehasonlításra.
+
+- A felhasználók pontokat kapnak a helyesen megválaszolt kvízkérdések után.
+
+- A pontozás figyelembe veheti a feladatok megoldására fordított időt is.
+
+- A rendszer admin felülettel rendelkezik, ahol az admin új kvízkérdéseket és feladatokat tölthet fel.
