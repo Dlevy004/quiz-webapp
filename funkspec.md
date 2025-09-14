@@ -30,6 +30,22 @@
 
 - Végső soron az alkalmazás célja, hogy egy minőségi, élvezetes és magas hatékonyságú nyelvtanulási segédeszközzé váljon, amely pozitív hatással van a felhasználók nyelvtudására és tanulási szokásaira, és technikailag is korszerű megoldásokat nyújt.
 
+## Jelenlegi helyzet
+
+- A nyelvtanulás, különösen a szókincsfejlesztés terén, a hagyományos módszerek ma is széleskörűen elterjedtek, azonban számos kihívást és hiányosságot rejtenek magukban, amelyek érintik a tanulók motivációját és a tanulási folyamat hatékonyságát.
+
+- Alkalmazásunk ezen problémákra nyújt megoldást:
+
+    - Az azonnali visszajelzés hiánya: A hagyományos módszerek (pl. szókártyák, jegyzetelés, nyomtatott könyvek) esetében a felhasználó gyakran órákra, napokra akár el van zárva a válaszok ellenőrzésétől és a hibák kijavításától. Ez azt eredményezi, hogy a tévesen megtanult vagy rosszul memorizált szó rögződik. Rendszerünk azonnali visszajelzést ad, ezzel megerősítve a helyes ismereteket és korrigálva a hibákat a memorizálás folyamatának legelején.
+
+    - A rugalmasság szempontja: Számos digitális alkalmazás csak egyirányú fordításra korlátozódik (pl. csak angolról magyarra), ami nem készíti fel eléggé a felhasználót a valódi, spontán kommunikációra. Megoldásunk véletlenszerűen váltogatja a kérdések irányát, kényszerítve a felhasználót a rugalmasabb és aktívabb szófelidézésre, ami közelebb visz a folyékony nyelvhasználathoz.
+
+    - A motivációvesztés és az unalom kockázata: Az ismétlődő tanulási formák gyorsan elveszíthetik a felhasználó érdeklődését. Alkalmazásunk beépített játékelemekkel (gamification) harcol az unalom ellen: egy pontozási rendszer, időkorlát és vizuális progress bar izgalmassá teszi a folyamatot, és kihívást jelent, ami ösztönzi a felhasználót, hogy jobb eredményt érjen el, mint legutóbb.
+
+    - A személyre szabottság hiánya: A tanulók szókincsi szintje nagyon változó. Egy kezdőt elbátortalaníthat egy haladó szintű feladat, míg egy haladót untathat egy túl egyszerű gyakorlat. Rendszerünk több nehézségi szintet kínál, lehetővé téve a felhasználó számára, hogy olyan kihívást válasszon, amely megfelel aa aktuális képességeinek, és fokozatosan lépjen tovább, ezzel is erősítve a tanulási önbizalmát.
+
+    - A haladás nyomon követésének nehézsége: Nehéz mérni a fejlődést papíralapú rendszerekkel. A felhasználónak nincs könnyen hozzáférhető adata arról, mennyit javult. Ez a webalkalmazás automatikusan naplózza és statisztikákat készít a teljesítményről, áttekinthető formában megjelenítve a szerzett pontszámokat és a tanulási előrehaladást, ami egy erős motivációs eszközzé válhat.
+
 ## Igényelt üzleti folyamatok
 
 - A program célja, hogy játékos és interaktív módon segítse a diákok nyelvtanulását a modern digitális környezetben.
