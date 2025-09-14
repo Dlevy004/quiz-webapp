@@ -128,33 +128,26 @@ Az azonosító, amellyel a diák belép a rendszerbe és amelyhez a kvízek ered
 - Időmérő 
 A kvíz közben futó mechanizmus, amely jelzi a kérdés(ek) megválaszolásához felhasznált időt.
 
-Kérdésirány
+- Kérdésirány
 A kvízkérdések előfordulási módja: angol → magyar, illetve magyar → angol fordítási irány.
 
-Kvíz
+- Kvíz
 Olyan feladatsor, amely több kérdésből áll, és amelyben a felhasználónak meg kell jelölnie a helyes választ.
 
-Nehézségi szint
+- Nehézségi szint
 A kérdések kategorizálása a szókincs bonyolultsága alapján (alap, középhaladó, haladó).
 
-Pontszám
+- Pontszám
 A kvízek kitöltése során elért teljesítménymutató, amely a helyes válaszok számán, valamint opcionálisan az időfelhasználáson alapul.
 
-Progress bar
+- Progress bar
 Grafikus elem, amely a kvíz előrehaladását vizuálisan jelzi.
 
-Reszponzív kialakítás
+- Reszponzív kialakítás
 Az alkalmazás olyan megjelenési formája, amely különböző eszközökön (mobil, tablet, asztali gép) is megfelelően működik és kényelmesen használható.
 
-Sötét/világos mód
+- Sötét/világos mód
 A felhasználói felület kétféle megjelenítési stílusa, amely a felhasználó igénye szerint váltható.
 
-Toplista
-A felhasználók rangsora az elért pontszámok alapján, amely ösztönzi a versenyt és motivációt biztosít.
-
-Vizuális visszajelzés
+- Vizuális visszajelzés
 Azonnali grafikus jelzés a válasz helyességéről (pl. helyes válasz: zöld, hibás válasz: piros).
-
-
-
-
