@@ -112,3 +112,49 @@
 - A pontozás figyelembe veheti a feladatok megoldására fordított időt is.
 
 - A rendszer admin felülettel rendelkezik, ahol az admin új kvízkérdéseket és feladatokat tölthet fel.
+
+
+## Fogalomtár
+
+- Adminisztrátor
+Az a felhasználó, aki jogosultsággal rendelkezik új kérdések és feladatok feltöltésére, valamint a rendszer karbantartására.
+
+- Elektronikus napló
+A rendszer azon része, amely rögzíti a felhasználó által kitöltött kvízek adatait (pontszám, idő, nehézségi szint).
+
+- Felhasználónév
+Az azonosító, amellyel a diák belép a rendszerbe és amelyhez a kvízek eredményei kapcsolódnak.
+
+- Időmérő 
+A kvíz közben futó mechanizmus, amely jelzi a kérdés(ek) megválaszolásához felhasznált időt.
+
+Kérdésirány
+A kvízkérdések előfordulási módja: angol → magyar, illetve magyar → angol fordítási irány.
+
+Kvíz
+Olyan feladatsor, amely több kérdésből áll, és amelyben a felhasználónak meg kell jelölnie a helyes választ.
+
+Nehézségi szint
+A kérdések kategorizálása a szókincs bonyolultsága alapján (alap, középhaladó, haladó).
+
+Pontszám
+A kvízek kitöltése során elért teljesítménymutató, amely a helyes válaszok számán, valamint opcionálisan az időfelhasználáson alapul.
+
+Progress bar
+Grafikus elem, amely a kvíz előrehaladását vizuálisan jelzi.
+
+Reszponzív kialakítás
+Az alkalmazás olyan megjelenési formája, amely különböző eszközökön (mobil, tablet, asztali gép) is megfelelően működik és kényelmesen használható.
+
+Sötét/világos mód
+A felhasználói felület kétféle megjelenítési stílusa, amely a felhasználó igénye szerint váltható.
+
+Toplista
+A felhasználók rangsora az elért pontszámok alapján, amely ösztönzi a versenyt és motivációt biztosít.
+
+Vizuális visszajelzés
+Azonnali grafikus jelzés a válasz helyességéről (pl. helyes válasz: zöld, hibás válasz: piros).
+
+
+
+
