@@ -46,6 +46,23 @@
 
     - A haladás nyomon követésének nehézsége: Nehéz mérni a fejlődést papíralapú rendszerekkel. A felhasználónak nincs könnyen hozzáférhető adata arról, mennyit javult. Ez a webalkalmazás automatikusan naplózza és statisztikákat készít a teljesítményről, áttekinthető formában megjelenítve a szerzett pontszámokat és a tanulási előrehaladást, ami egy erős motivációs eszközzé válhat.
 
+## Követelménylista
+
+| Modul        |  ID  | Név                     |  v. | Kifejtés |
+|--------------|------|------------------------ |-----|----------|
+| Jogosultság  |  K1  | Felhasználónév megadása | 1.0 | A diákok egyetlen, egyedi felhasználónév megadásával léphetnek be a rendszerbe. A rendszer ezen a néven azonosítja őket, és ehhez a névhez fűződnek majd az eredmények az Elektronikus Naplóban.|
+| Feladattípus |  K2  | Kvíz                    | 1.0 | A kvíz alapvető feladattípusa egy feleletválasztós teszt, amely több kérdésből áll. Minden kérdéshez legalább négy lehetséges válasz tartozik, amelyek közül egy a helyes.|
+| Feladattípus |  K3  | Kétirányú kvíz          | 1.0 | A kétirányú gyakorlás lehetővé teszi a felhasználóknak, hogy angolról magyarra és magyarról angolra is tesztelhessék a tudásukat. A rendszernek képesnek kell lennie a szavak és kifejezések mindkét irányú lekérdezésére.|
+| Feladattípus |  K4  | Nehézségi szintek       | 1.0 | A kérdéseket nehézség szerint kell csoportosítani, ami lehetővé teszi a felhasználóknak, hogy a tudásszintjüknek megfelelő feladatokat válasszanak. Szintek: alap, középhaladó, és haladó. Ez a szűrés javítja a felhasználói élményt és a tanulás hatékonyságát.|
+| Adatkezelés  |  K5  | Elektronikus Napló      | 1.0 | Az Elektronikus Napló funkcióval a felhasználók nyomon követhetik a fejlődésüket. A naplóban meg kell jelennie az elért pontszámnak, a kvíz kitöltésére fordított időnek, valamint a helyes és helytelen válaszok számának. A napló grafikus megjelenítése tovább növelheti a felhasználói motivációt.|
+| Adatkezelés  |  K6  | Eredmények mentése      | 1.0 | A rendszer minden kvíz befejezése után automatikusan elmenti a felhasználó pontszámát, a hozzárendelt felhasználónévhez. Ez az adatbázis-kezelési funkció alapvető fontosságú a felhasználói előrehaladás rögzítéséhez és az Elektronikus Napló feltöltéséhez.|
+| Felület      |  K7  | Sötét/Világos Mód       | 1.0 | A felhasználók beállíthatják az alkalmazás megjelenését, választhatnak a világos és a sötét mód között. Ez a funkció növeli a felhasználói kényelmet, különösen gyenge fényviszonyok mellett.|
+| Felület      |  K8  | Időmérő                 | 1.0 | A kvíz kitöltése alatt egy vizuálisan is látható időmérő számlálja a felhasználó által eltöltött időt. Bár a pontszámot nem befolyásolja, az idő adatai megjelennek a naplóban, segítve a felhasználókat az önértékelésben és a tempójuk monitorozásában.|
+| Felület      |  K9  | Vizuális visszajelzés   | 1.0 | A felhasználók azonnali, vizuális visszajelzést kapnak a válaszaikról. Például a helyes válasz zöld színnel, míg a helytelen piros színnel jelenik meg, így segítve a tanulást és a hibák gyors felismerését.|
+| Felület      |  K10 | Progress bar            | 1.0 | A progress bar vizuálisan jelzi a felhasználónak a kvíz előrehaladását, például a már megválaszolt kérdések számát a teljes kérdésszámhoz viszonyítva. Ez a funkció segít a felhasználónak felmérni, hogy mennyi van még hátra a kvízből.|
+| Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A felhasználói felület reszponzív kialakítása biztosítja, hogy az alkalmazás automatikusan alkalmazkodjon a különböző eszközök (asztali gép, mobil, tablet) képernyőméretéhez és tájolásához. Ez a kulcsfontosságú funkció a széles körű felhasználói hozzáférhetőség biztosításához.|
+| Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók a főoldalon a felhasználónév megadásával jutnak be az alkalmazás felületére. Ez a lépés indítja el a felhasználói munkamenetet, és teszi lehetővé a személyre szabott adatok (pl. napló) elérését.|
+
 ## Igényelt üzleti folyamatok
 
 - A program célja, hogy játékos és interaktív módon segítse a diákok nyelvtanulását a modern digitális környezetben.
