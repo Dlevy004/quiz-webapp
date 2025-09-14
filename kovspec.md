@@ -48,6 +48,23 @@
 
 ## András:
 
+### Követelménylista
+
+| Modul        |  ID  | Név                     |  v. | Kifejtés |
+|--------------|------|------------------------ |-----|----------|
+| Jogosultság  |  K1  | Felhasználónév megadása | 1.0 | A diákok egy felhasználónévvel tudnak bejelentkezni.|
+| Feladattípus |  K2  | Kvíz                    | 1.0 | A kvíz több kérdésből áll, ahol több lehetőség közül kell a helyes választ kiválasztani.|
+| Feladattípus |  K3  | Kétirányú kvíz          | 1.0 | A rendszer lehetővé teszi a kétirányú gyakorlást.|
+| Feladattípus |  K4  | Nehézségi szintek       | 1.0 | A kérdések nehézség szerint csoportosíthatók.|
+| Adatkezelés  |  K5  | Elektronikus Napló      | 1.0 | A felhasználók láthatják az elért eredményeiket, a kvíz pontszámát és a kitöltésre fordított időt.|
+| Adatkezelés  |  K6  | Eredmények mentése      | 1.0 | A rendszer minden kvíz után elmenti a pontszámot a felhasználónévhez.|
+| Felület      |  K7  | Sötét/Világos Mód       | 1.0 | A felhasználók választhatnak világos és sötét mód között.|
+| Felület      |  K8  | Időmérő                 | 1.0 | A kvíz alatt egy időzítő méri a kitöltés idejét. A végeredményt nem befolyásolja, de a naplóban megjelenik.|
+| Felület      |  K9  | Vizuális visszajelzés   | 1.0 | A rendszer azonnali visszajelzést ad a felhasználónak a válaszai helyességéről.|
+| Felület      |  K10 | Progress bar            | 1.0 | A kvíz előrehaladását egy progress bar jelzi.|
+| Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A webes alkalmazás reszponzív, így asztali gépen, mobilon és tableten egyaránt használható.|
+| Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók belépnek a felületre.|
+
 ### Jelenlegi üzleti folyamatok modellje
 
 - A hagyományos oktatás elavult és passzív.
