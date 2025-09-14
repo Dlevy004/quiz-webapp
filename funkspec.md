@@ -14,11 +14,11 @@
 
 - A játékélményt több kiegészítő funkció támogatja:
 
-    * időkorlátos kérdések, amelyek fokozzák az izgalmat és a koncentrációt, mindezt úgy, hogy közben ösztönzi a felhasználót a gyors és határozott döntéshozatalra
-    * a rendszer folyamatosan vezeti a szerzett pontok összesített számát, amely egy külön eredmények menüpontban tekinthető meg, így a felhasználó nyomon követheti a fejlődését
-    * progress bar, amely vizuálisan mutatja az előrehaladást,
-    * nehézségi szintek (alap, középhaladó, haladó), amelyek lehetővé teszik a fokozatos fejlődést,
-    * világos/sötét mód váltás, amely növeli a felhasználói élményt.
+  - időkorlátos kérdések, amelyek fokozzák az izgalmat és a koncentrációt, mindezt úgy, hogy közben ösztönzi a felhasználót a gyors és határozott döntéshozatalra
+  - a rendszer folyamatosan vezeti a szerzett pontok összesített számát, amely egy külön eredmények menüpontban tekinthető meg, így a felhasználó nyomon követheti a fejlődését
+  - progress bar, amely vizuálisan mutatja az előrehaladást,
+  - nehézségi szintek (alap, középhaladó, haladó), amelyek lehetővé teszik a fokozatos fejlődést,
+  - világos/sötét mód váltás, amely növeli a felhasználói élményt.
 
 - Az alkalmazás webes környezetben érhető el, reszponzív kialakítással, tehát egyaránt használható számítógépen, tableten és mobiltelefonon. Ez biztosítja, hogy a felhasználók bármikor, bárhonnan hozzáférhessenek, így a nyelvtanulás könnyen beépíthető a mindennapjaikba.
 
