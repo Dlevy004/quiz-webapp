@@ -136,122 +136,122 @@
 
 ## Fogalomtár
 
-Adminisztrátor (Admin)
+- Adminisztrátor (Admin)
 Olyan felhasználó, aki kérdésbankot és kvízparamétereket kezelhet (létrehozás, módosítás, törlés), riportokat tekinthet meg, és rendszerszintű beállításokat végezhet.
 
-Alkalmazás (Rendszer)
+- Alkalmazás (Rendszer)
 A webalapú kvízplatform teljes egésze: front-end, back-end, adatbázis és admin felület.
 
-Angol → magyar / Magyar → angol (Kérdésirány)
+- Angol → magyar / Magyar → angol (Kérdésirány)
 A feladatok fordítási iránya. A rendszer véletlenszerűen választja ki kérdésenként.
 
-API
+- API
 A back-end által biztosított programozott hozzáférési pontok összessége, amelyen keresztül a front-end adatot kér és küld.
 
-Autentikáció / Bejelentkezés
+- Autentikáció / Bejelentkezés
 A felhasználó azonosítása (jelen rendszerben egyedi felhasználónévvel). Sikeres azonosítás után indul a munkamenet.
 
-Beállítások
+- Beállítások
 Felhasználói preferenciák (pl. sötét/világos mód, nyelvi beállítások), amelyek lokálisan vagy profilhoz kötötten tárolódnak.
 
-Elektronikus Napló
+- Elektronikus Napló
 A felhasználó kvíz-előzményeinek és teljesítménymutatóinak (pontszám, idő, helyes/hibás válaszok) strukturált tára és megjelenítése.
 
-Eredmény
+- Eredmény
 Egy kitöltött kvíz aggregált kimenete: pontszám, helyes válaszok aránya, teljes kitöltési idő, nehézségi szint.
 
-Feladat (Kérdés)
+- Feladat (Kérdés)
 A kvíz egysége: kérdés szövegével, opcionális képi elemmel és több válaszlehetőséggel; pontosan egy helyes megoldással.
 
-Feladattípus: Kvíz
+- Feladattípus: Kvíz
 Feleletválasztós feladatsor, fix kérdésszámmal vagy előre definiált időkerettel.
 
-Felhasználó
+- Felhasználó
 A rendszer aktív használója (diák/tanuló), akinek kvíz-eredményei naplózásra kerülnek.
 
-Felhasználónév
+- Felhasználónév
 Egyedi szöveges azonosító, amelyhez a rendszer a teljesítményadatokat rendeli.
 
-Frontend
+- Frontend
 A kliensoldali alkalmazás (UI), amelyet a felhasználó a böngészőben használ.
 
-Gamification (Játékosítás)
+- Gamification (Játékosítás)
 Motivációs mechanizmusok összessége (pontozás, progress bar, toplista, időzítő), amelyek növelik az elköteleződést.
 
-Időkorlát / Időmérő
+- Időkorlát / Időmérő
 A kérdések vagy a teljes kvíz megválaszolására rendelkezésre álló idő kezelése és vizuális visszajelzése.
 
-Kérdésbank
+- Kérdésbank
 Az admin által karbantartott strukturált gyűjtemény kérdésekkel, válaszokkal, metaadatokkal (nehézségi szint, téma, címkék).
 
-Kérdésirány
+- Kérdésirány
 Lásd: Angol → magyar / Magyar → angol.
 
-Kétirányú kvíz
+- Kétirányú kvíz
 Kvízmód, amelyben a rendszer vegyesen ad angol → magyar és magyar → angol kérdéseket.
 
-Lokalizáció (i18n)
+- Lokalizáció (i18n)
 A felület és a tartalmak nyelvi/kulturális adaptálása (HU/EN feliratok, formátumok).
 
-Nehézségi szint
+- Nehézségi szint
 A kérdések bonyolultsági kategóriája: alap, középhaladó, haladó.
 
-Pontszám
+- Pontszám
 A kvíz során elért teljesítmény numerikus értéke; alapja a helyes válaszok száma, és opcionálisan az időfelhasználás.
 
-Progress bar (Előrehaladás-jelző)
+- Progress bar (Előrehaladás-jelző)
 Vizuális komponens, amely jelzi a kvízben megtett előrehaladást (megválaszolt / összes kérdés arány).
 
-Reszponzív felület
+- Reszponzív felület
 UI-kialakítás, amely különböző kijelzőméreteken és tájolásokban is optimalizáltan jelenik meg (mobil, tablet, desktop).
 
-Riport
+- Riport
 Összegző nézet vagy kimutatás (felhasználói eredmény, kérdés-nehézség, időfelhasználás, toplista), szűrésekkel és exporttal.
 
-Sötét/Világos mód (Téma)
+- Sötét/Világos mód (Téma)
 Váltható megjelenési témák a vizuális komfort és az akadálymentesség érdekében.
 
-Szókincs adatbázis (Szólista)
+- Szókincs adatbázis (Szólista)
 A kérdésbank alapját képező lexikai elemek (szavak, kifejezések), fordításokkal és metaadatokkal.
 
-Szűrők
+- Szűrők
 Riportokban és listanézetekben alkalmazható feltételek (időszak, nehézségi szint, téma, felhasználó).
 
-Téma / Kategória
+- Téma / Kategória
 Tartalmi csoportosítás a kérdésbankban (pl. mindennapi élet, utazás, munka, iskola).
 
-Toplista
+- Toplista
 Ranglista, amely a felhasználókat pontszám, helyességi arány vagy más mutató szerint rendezi.
 
-UI (Felhasználói felület)
+- UI (Felhasználói felület)
 A vizuális és interakciós elemek összessége, amelyekkel a felhasználó a rendszerrel kommunikál.
 
-Validáció
+- Validáció
 Beviteli adatok ellenőrzése (kötelező mezők, formátum, egyediség), hibaüzenetek biztosítása.
 
-Vizuális visszajelzés
+- Vizuális visszajelzés
 Azonnali jelzés a válasz helyességéről (zöld/piros kiemelés, helyes megoldás megjelenítése).
 
-Backend
+- Backend
 Szerveroldali komponensek: üzleti logika, perzisztencia, értékelés, riport-kiszolgálás.
 
-Adatbázis
+- Adatbázis
 Perzisztens tároló a felhasználók, kvízek, kérdések, eredmények és riportok számára.
 
-Munkamenet (Session)
+- Munkamenet (Session)
 A bejelentkezett felhasználó aktív interakciós időszaka; a kliens és a szerver közti állapotkezelés.
 
-Válaszlehetőség
+- Válaszlehetőség
 Egy kérdéshez tartozó alternatív opció. Egy opció a helyes.
 
-Verzió (v.)
+- Verzió (v.)
 Követelmény/elem aktuális kiadási száma a dokumentációban (pl. „1.0”).
 
-Címke (Tag)
+- Címke (Tag)
 A kérdésbank elemeinek gyors keresését segítő kiegészítő jelölő (pl. „phrasal-verb”, „food”).
 
-Export
+- Export
 Riportok és naplók letöltése (CSV, PDF), megosztható formában.
 
-Jogosultságkezelés
+- Jogosultságkezelés
 Szerepkör- és hozzáférés-szabályok, amelyek meghatározzák, ki milyen műveleteket végezhet (felhasználó vs. admin).
