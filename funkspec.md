@@ -38,7 +38,7 @@
 
     - Az azonnali visszajelzés hiánya: A hagyományos módszerek (pl. szókártyák, jegyzetelés, nyomtatott könyvek) esetében a felhasználó gyakran órákra, napokra akár el van zárva a válaszok ellenőrzésétől és a hibák kijavításától. Ez azt eredményezi, hogy a tévesen megtanult vagy rosszul memorizált szó rögződik. Rendszerünk azonnali visszajelzést ad, ezzel megerősítve a helyes ismereteket és korrigálva a hibákat a memorizálás folyamatának legelején.
 
-    - A rugalmasság szempontja: Számos digitális alkalmazás csak egyirányú fordításra korlátozódik (pl. csak angolról magyarra), ami nem készíti fel eléggé a felhasználót a valódi, spontán kommunikációra. Megoldásunk véletlenszerűen váltogatja a kérdések irányát, kényszerítve a felhasználót a rugalmasabb és aktívabb szófelidézésre, ami közelebb visz a folyékony nyelvhasználathoz.
+    - A rugalmasság szempontja: Számos digitális alkalmazás csak egyirányú fordításra korlátozódik (pl. csak angolról magyarra), ami nem készíti fel eléggé a felhasználót a valódi, spontán kommunikációra. Megoldásunk véletlenszerűen váltogatja a kérdések irányát, kényszerítve a felhasználót a rugalmasabb és aktívabb szófelidézésre, ami közelebb visz a folyékony nyelvhasználathoz.Jelenlegi üzleti folyamatok modellje:
 
     - A motivációvesztés és az unalom kockázata: Az ismétlődő tanulási formák gyorsan elveszíthetik a felhasználó érdeklődését. Alkalmazásunk beépített játékelemekkel (gamification) harcol az unalom ellen: egy pontozási rendszer, időkorlát és vizuális progress bar izgalmassá teszi a folyamatot, és kihívást jelent, ami ösztönzi a felhasználót, hogy jobb eredményt érjen el, mint legutóbb.
 
@@ -62,6 +62,58 @@
 | Felület      |  K10 | Progress bar            | 1.0 | A progress bar vizuálisan jelzi a felhasználónak a kvíz előrehaladását, például a már megválaszolt kérdések számát a teljes kérdésszámhoz viszonyítva. Ez a funkció segít a felhasználónak felmérni, hogy mennyi van még hátra a kvízből.|
 | Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A felhasználói felület reszponzív kialakítása biztosítja, hogy az alkalmazás automatikusan alkalmazkodjon a különböző eszközök (asztali gép, mobil, tablet) képernyőméretéhez és tájolásához. Ez a kulcsfontosságú funkció a széles körű felhasználói hozzáférhetőség biztosításához.|
 | Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók a főoldalon a felhasználónév megadásával jutnak be az alkalmazás felületére. Ez a lépés indítja el a felhasználói munkamenetet, és teszi lehetővé a személyre szabott adatok (pl. napló) elérését.|
+
+## Jelenlegi üzleti folyamatok modellje
+
+- A jelenlegi oktatási rendszerben a tanulás alapvetően egyirányú és passzív folyamat.
+
+- A diákok kizárólag hagyományos, statikus tananyagokból, például tankönyvekből sajátítanak el tudást.
+
+- Az egyéni tanulási stílusok, mint a vizuális vagy auditív tanulás, nem kapnak elegendő figyelmet.
+
+- Ez a megközelítés szinte semmilyen lehetőséget nem biztosít a személyre szabott tanulásra, hiszen a tanároknak a teljes osztály átlagához kell igazodniuk.
+
+- A tanulási folyamat nem skálázható. A tanároknak nincs kapacitásuk arra, hogy minden egyes diák egyéni tempóját és igényeit figyelembe vegyék.
+
+- Ez a helyzet a gyengébben teljesítő diákok lemaradását és a tehetségesebbek unatkozását eredményezi.
+
+- A jelenlegi oktatási modell merev és rugalmatlan, így nem képes hatékonyan alkalmazkodni a diákok egyéni igényeihez és képességeihez.
+
+- A tanulás unalmas rutinná válik, ahelyett, hogy interaktív és szórakoztató élmény lenne.
+
+- A hagyományos tankönyvek tartalma elavult lehet, és nem reflektál a mai nyelvi trendekre, szlengre vagy kulturális változásokra.
+
+- A tanároknak rengeteg órát kell a dolgozatok kézi javításával és az adminisztrációval tölteniük, ami elvonja a figyelmet az érdemi oktatómunkától.
+
+- Emiatt a diákok olyan nyelvezetet tanulnak, ami nem feltétlenül tükrözi a mai angol nyelvet.
+
+- A hagyományos rendszerek nem fejlesztik azokat a digitális készségeket, amelyekre a jövőben szükség lesz.
+
+- A tankönyvek tartalma gyakran nem frissül elég gyorsan, ami a gyorsan változó világban komoly hátrányt jelent.
+
+- A tudás számonkérése is nagyrészt papíralapú dolgozatok és vizsgák formájában történik.
+
+- A diákok nehezen követik nyomon saját fejlődésüket, mivel nincsenek részletes statisztikák és visszajelzések a teljesítményükről.
+
+- A tanulók nem kapnak azonnali visszajelzést a hibáikról, ami lassítja a tanulási folyamatot és csökkenti a motivációt.
+
+- A diákok érdeklődése hamar alábbhagy a motiváció hiánya miatt, ami a megszerzett tudás felszínes maradását eredményezi.
+
+- Az oktatás nem nyújt megfelelő felkészülést a valós életre, mert hiányzik a gyakorlati, interaktív tudáselsajátítás.
+
+- A diákok megtanulják a szabályokat, de nem tudják azokat alkalmazni a mindennapi kommunikációban.
+
+- A felmérések nem csupán elavultak, de rendkívül idő és energiaigényesek a pedagógusok számára.
+
+- A tanároknak rengeteg órát kell a dolgozatok kézi javításával és az adminisztrációval tölteniük, ami elvonja a figyelmet az érdemi oktatómunkától.
+
+- A papíralapú oktatás jelentős nyomdai és terjesztési költségeket generál az iskoláknak, ami gazdaságilag fenntarthatatlan.
+
+- Környezeti terhelést is jelent a felhasznált papír mennyisége miatt.
+
+- A fenntarthatóság kérdése egyre fontosabb a társadalomban, és a jelenlegi rendszer ezzel szembemegy.
+
+- Összességében a tradicionális oktatás elavult keretei akadályozzák a hatékony és élvezetes tudásszerzést.
 
 ## Igényelt üzleti folyamatok
 
