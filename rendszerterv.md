@@ -3,7 +3,7 @@
 ## Üzleti folyamatok modellje
 
 ### DIÁK szerepkör
-![student-role](./rendszerterv%20ábrák/diák-szerep.png)
+![student-role](./rendszerterv%20ábrák/student-role.png)
 
 ### Kvíz menete
-![quiz-session](./rendszerterv%20ábrák/kvíz-menete.png)
+![quiz-session](./rendszerterv%20ábrák/quiz-session.png)
