@@ -21,3 +21,82 @@ A projekt célkitűzései közé tartozik egy olyan technológiailag korszerű, 
 
 ### Kvíz menete
 ![quiz-session](./rendszerterv%20ábrák/quiz-session.png)
+
+## Követelmények
+### Funkcionális követelmények
+
+A rendszernek a felhasználók igényeihez és a nyelvtanulás céljához igazodva a következő funkciókat kell biztosítania:
+- Felhasználói kezelés
+    - Regisztráció és egyedi felhasználónév létrehozása.
+    - Bejelentkezés és munkamenet-kezelés.
+    - Saját profil megtekintése, statisztikák és eredmények visszanézése.
+    - A rendszernek ellenőriznie kell, hogy a megadott felhasználónév egyedi és megfelel-e az előre meghatározott formátumnak (pl. minimum 3, maximum 20 karakter, ékezetek nélkül).
+
+- Kvízfunkciók
+    - Feleletválasztós kvízek kitöltése.
+    - Kétirányú gyakorlás (angol-magyar, magyar-angol).
+    - A kérdéseket nehézségi szint (alap, középhaladó, haladó) szerint kell besorolni, ami lehetővé teszi a szűrést és a testreszabott kvízösszeállítást.
+    - Progress bar a haladás vizuális jelzésére.
+    - Azonnali visszajelzés minden kérdés után (helyes/hibás megoldás, helyes válasz megjelenítése).
+    - Időmérő alkalmazása a kitöltés közben.
+    - A kvíz befejezésekor (az utolsó kérdés megválaszolásakor) az időmérőnek automatikusan le kell állnia, és a pontos időt rögzítenie kell.
+
+- Eredmények és naplózás
+    - Összesítő statisztikák megjelenítése (helyes és helytelen válaszok száma, kitöltési idő).
+    - Toplista vezetése a felhasználók pontszámai alapján.
+
+- Tartalomkezelés (ADMIN)
+    - Kérdések karbantartása (új kérdések, nehézségi szintek).
+    - Riportok és statisztikák exportálása (pl. CSV, PDF).
+
+- Felület és felhasználói élmény
+    - Reszponzív design, amely támogatja a különböző kijelzőméreteket (desktop, tablet, mobil).
+    - Világos/sötét mód váltási lehetősége.
+    - Képes kérdések támogatása a vizuális tanulás érdekében.
+
+### Nem funkcionális követelmények
+
+A rendszernek a működés minőségére, teljesítményére és biztonságára vonatkozó elvárások:
+- Biztonság
+    - A felhasználói adatokhoz csak a jogosult személyek férhetnek hozzá.
+    - A jelszavakat titkosított formában kell tárolni.
+    - HTTPS titkosítás kötelező.
+
+- Adatvédelem
+    - Egy felhasználó nem férhet hozzá más felhasználók személyes adataihoz a felhasználónevén kívül.
+    - A statisztikák és anonimizált adatokat jeleníthetnek meg.
+
+- Teljesítmény
+    - Az oldal betöltési ideje ne haladja meg az 1-2 másodpercet átlagos internetkapcsolaton.
+    - A felhasználói felületnek gyorsan kell betöltődnie, a válaszok elküldése és az új kérdések megjelenítése közötti késleltetésnek minimálisnak kell lennie.
+
+- Használhatóság
+    - Az alkalmazás legyen könnyen kezelhető.
+    - A felület feleljen meg az alapvető akadálymentességi elvárásoknak.
+    - A vizuális visszajelzések (színek, ikonok) minden felhasználó számára egyértelműek legyenek.
+
+- Karbantarthatóság és bővíthetőség
+    - A rendszerhez később új funkciókkal (pl. további nyelvek, tanári szerepkör) is bővülhet.
+    - A kódnak tiszta szerkezetűnek kell lennie, ami megkönnyíti a karbantartást és a hibakeresést.
+    - Verziókövetés (Git) használata kötelező.
+
+### Törvényi előírások, szabványok
+
+A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak és szabványoknak kell megfelelnie:
+- GDPR (Általános Adatvédelmi Rendelet):
+    - Személyes adatok kezelése (regisztráció, eredmények, statisztikák) jogszerűen, tisztességesen, átláthatóan.
+    - Adatok minimalizálása: csak a szükséges adatokat gyűjtjük.
+    - Felhasználói jogok biztosítása: hozzáférés, törlés, helyesbítés, tiltakozás.
+
+- Infotv. (2011. évi CXII. törvény):
+    - A magyar jogszabályok szerinti adatkezelési előírások betartása.
+
+- Szerzői jogi szabályozás:
+    - A kvízkérdések, képek, tananyagok nem sérthetik harmadik felek szerzői jogait.
+    - Csak jogtiszta, engedélyezett vagy saját készítésű tartalom használható.
+
+- Cookie-kra vonatkozó szabályozás:
+    - A rendszernek kezelnie kell a sütiket (cookie-k) a felhasználói hozzájárulásnak megfelelően, különös tekintettel az EU-s szabályozásokra.
+
+- Webes szabványok:
+    - Az alkalmazásnak meg kell felelnie a modern webes szabványoknak (pl. HTML5, CSS3), hogy a különböző böngészőkben is hibamentesen fusson.
