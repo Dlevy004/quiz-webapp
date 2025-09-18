@@ -169,6 +169,58 @@
 
 - Hozzáfér a feladott leckékhez és bármikor újra megoldhatja a gyakorló kvízeket.
 
+
+
+
+
+## Forgatókönyv – Kvíz indítása és kitöltése
+Szereplők:
+- Felhasználó (Diák) – a rendszer végfelhasználója, aki gyakorolni szeretne.
+- Rendszer (Webalkalmazás) – a kvízjáték platform, amely a kérdéseket szolgáltatja, értékel, és visszajelzést ad.
+
+
+Előfeltételek:
+- A felhasználó rendelkezik egy választott felhasználónévvel.
+- A rendszerben vannak elérhető kérdések és nehézségi szintek.
+
+
+Fő folyamat:
+- Bejelentkezés
+    - A felhasználó megnyitja az alkalmazást.
+    - A kezdőlapon beírja a felhasználónevét, majd rákattint a „Belépés” gombra.
+    - A rendszer ellenőrzi, hogy a felhasználónév létezik-e, és belépteti a felhasználót.
+    
+- Kvíz indítása
+    - A felhasználó kiválasztja a kvíz nehézségi szintjét (alap, középhaladó, haladó).
+    - A rendszer összeállít egy kérdéssort a választott szintnek megfelelően.
+    - A rendszer véletlenszerűen meghatározza a kérdésirányokat (angol → magyar vagy magyar → angol).
+
+- Kérdések megválaszolása
+    - A rendszer megjeleníti az első kérdést, és elindítja az időmérőt.
+    - A felhasználó kiválasztja a helyesnek vélt választ.
+    - A rendszer azonnali vizuális visszajelzést ad (zöld = helyes, piros = hibás), és mutatja a helyes választ.
+    - A progress bar előrehalad, jelezve a kérdéssor állását.
+    - Ez ismétlődik, amíg a felhasználó az összes kérdést meg nem válaszolja.
+
+-  Eredmények összesítése
+    - A rendszer kiszámítja a pontszámot és a helyes válaszok arányát.
+    - Megjeleníti a kvíz teljes kitöltési idejét.
+    - A felhasználó egy összesítő képernyőt lát (pontszám, hibák, helyes válaszok).
+
+- Eredmények naplózása
+    - A rendszer elmenti az eredményt az Elektronikus Naplóba a felhasználónévhez rendelve.
+    - A felhasználó bármikor visszanézheti korábbi eredményeit a „Napló” menüpontban.
+
+
+Alternatív folyamatok:
+- Hibás bejelentkezés: ha a felhasználónév nem megfelelő, a rendszer hibaüzenetet küld, és nem enged belépni.
+- Kvíz megszakítása: a felhasználó bármikor kiléphet, ekkor a rendszer nem menti az eredményt.
+
+
+Utófeltételek:
+- A felhasználó eredménye rögzítve van az Elektronikus Naplóban.
+- A toplista (ha van) frissül az új pontszám alapján.
+
 ## Fogalomtár
 
 - Adminisztrátor (Admin)
@@ -290,53 +342,3 @@ Riportok és naplók letöltése (CSV, PDF), megosztható formában.
 
 - Jogosultságkezelés
 Szerepkör- és hozzáférés-szabályok, amelyek meghatározzák, ki milyen műveleteket végezhet (felhasználó vs. admin).
-
-
-
-## Forgatókönyv – Kvíz indítása és kitöltése
-Szereplők:
-- Felhasználó (Diák) – a rendszer végfelhasználója, aki gyakorolni szeretne.
-- Rendszer (Webalkalmazás) – a kvízjáték platform, amely a kérdéseket szolgáltatja, értékel, és visszajelzést ad.
-
-
-Előfeltételek:
-- A felhasználó rendelkezik egy választott felhasználónévvel.
-- A rendszerben vannak elérhető kérdések és nehézségi szintek.
-
-
-Fő folyamat:
-- Bejelentkezés
-    - A felhasználó megnyitja az alkalmazást.
-    - A kezdőlapon beírja a felhasználónevét, majd rákattint a „Belépés” gombra.
-    - A rendszer ellenőrzi, hogy a felhasználónév létezik-e, és belépteti a felhasználót.
-    
-- Kvíz indítása
-    - A felhasználó kiválasztja a kvíz nehézségi szintjét (alap, középhaladó, haladó).
-    - A rendszer összeállít egy kérdéssort a választott szintnek megfelelően.
-    - A rendszer véletlenszerűen meghatározza a kérdésirányokat (angol → magyar vagy magyar → angol).
-
-- Kérdések megválaszolása
-    - A rendszer megjeleníti az első kérdést, és elindítja az időmérőt.
-    - A felhasználó kiválasztja a helyesnek vélt választ.
-    - A rendszer azonnali vizuális visszajelzést ad (zöld = helyes, piros = hibás), és mutatja a helyes választ.
-    - A progress bar előrehalad, jelezve a kérdéssor állását.
-    - Ez ismétlődik, amíg a felhasználó az összes kérdést meg nem válaszolja.
-
--  Eredmények összesítése
-    - A rendszer kiszámítja a pontszámot és a helyes válaszok arányát.
-    - Megjeleníti a kvíz teljes kitöltési idejét.
-    - A felhasználó egy összesítő képernyőt lát (pontszám, hibák, helyes válaszok).
-
-- Eredmények naplózása
-    - A rendszer elmenti az eredményt az Elektronikus Naplóba a felhasználónévhez rendelve.
-    - A felhasználó bármikor visszanézheti korábbi eredményeit a „Napló” menüpontban.
-
-
-Alternatív folyamatok:
-- Hibás bejelentkezés: ha a felhasználónév nem megfelelő, a rendszer hibaüzenetet küld, és nem enged belépni.
-- Kvíz megszakítása: a felhasználó bármikor kiléphet, ekkor a rendszer nem menti az eredményt.
-
-
-Utófeltételek:
-- A felhasználó eredménye rögzítve van az Elektronikus Naplóban.
-- A toplista (ha van) frissül az új pontszám alapján.

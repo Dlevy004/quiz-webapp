@@ -44,22 +44,25 @@
 
   - Webalkalmazásunk segítségével a felhasználó a saját idejében és a saját érdeklődési körének megfelelő nehézségi szinten gyakorolhat.
 
-## Követelménylista
+## Vágyálom rendszer
 
-| Modul        |  ID  | Név                     |  v. | Kifejtés |
-|--------------|------|------------------------ |-----|----------|
-| Jogosultság  |  K1  | Felhasználónév megadása | 1.0 | A diákok egy felhasználónévvel tudnak bejelentkezni.|
-| Feladattípus |  K2  | Kvíz                    | 1.0 | A kvíz több kérdésből áll, ahol több lehetőség közül kell a helyes választ kiválasztani.|
-| Feladattípus |  K3  | Kétirányú kvíz          | 1.0 | A rendszer lehetővé teszi a kétirányú gyakorlást.|
-| Feladattípus |  K4  | Nehézségi szintek       | 1.0 | A kérdések nehézség szerint csoportosíthatók.|
-| Adatkezelés  |  K5  | Elektronikus Napló      | 1.0 | A felhasználók láthatják az elért eredményeiket, a kvíz pontszámát és a kitöltésre fordított időt.|
-| Adatkezelés  |  K6  | Eredmények mentése      | 1.0 | A rendszer minden kvíz után elmenti a pontszámot a felhasználónévhez.|
-| Felület      |  K7  | Sötét/Világos Mód       | 1.0 | A felhasználók választhatnak világos és sötét mód között.|
-| Felület      |  K8  | Időmérő                 | 1.0 | A kvíz alatt egy időzítő méri a kitöltés idejét. A végeredményt nem befolyásolja, de a naplóban megjelenik.|
-| Felület      |  K9  | Vizuális visszajelzés   | 1.0 | A rendszer azonnali visszajelzést ad a felhasználónak a válaszai helyességéről.|
-| Felület      |  K10 | Progress bar            | 1.0 | A kvíz előrehaladását egy progress bar jelzi.|
-| Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A webes alkalmazás reszponzív, így asztali gépen, mobilon és tableten egyaránt használható.|
-| Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók belépnek a felületre.|
+- A projekt célja egy olyan rendszer, amely játékos formában segíti a nyelvtanulást és gyakorlást.
+
+- A rendszer több platformon elérhető: weben és androidos alkalmazásként.
+
+- Regisztráció után a felhasználó különböző kvíz- és feladattípusok közül választhat.
+
+- A program színes, látványos felülettel rendelkezik, hogy motiválja és lekösse a tanulókat.
+
+- A feladatok játékos elemeket tartalmaznak, ezzel élvezetesebbé téve a nyelvtanulást.
+
+- A rendszer tárolja a felhasználók teljesítményét (pl. toplista), így lehetőség nyílik másokkal való összehasonlításra.
+
+- A felhasználók pontokat kapnak a helyesen megválaszolt kvízkérdések után.
+
+- A pontozás figyelembe veheti a feladatok megoldására fordított időt is.
+
+- A rendszer admin felülettel rendelkezik, ahol az admin új kvízkérdéseket és feladatokat tölthet fel.
 
 ## Jelenlegi üzleti folyamatok modellje
 
@@ -93,66 +96,22 @@
 
 - A jelenlegi modell merev és rugalmatlan, ami akadályozza a hatékony tudásszerzést.
 
-## Vágyálom rendszer
+## Követelménylista
 
-- A projekt célja egy olyan rendszer, amely játékos formában segíti a nyelvtanulást és gyakorlást.
-
-- A rendszer több platformon elérhető: weben és androidos alkalmazásként.
-
-- Regisztráció után a felhasználó különböző kvíz- és feladattípusok közül választhat.
-
-- A program színes, látványos felülettel rendelkezik, hogy motiválja és lekösse a tanulókat.
-
-- A feladatok játékos elemeket tartalmaznak, ezzel élvezetesebbé téve a nyelvtanulást.
-
-- A rendszer tárolja a felhasználók teljesítményét (pl. toplista), így lehetőség nyílik másokkal való összehasonlításra.
-
-- A felhasználók pontokat kapnak a helyesen megválaszolt kvízkérdések után.
-
-- A pontozás figyelembe veheti a feladatok megoldására fordított időt is.
-
-- A rendszer admin felülettel rendelkezik, ahol az admin új kvízkérdéseket és feladatokat tölthet fel.
-
-## Fogalomtár
-
-- Adminisztrátor:
-Az a felhasználó, aki jogosultsággal rendelkezik új kérdések és feladatok feltöltésére, valamint a rendszer karbantartására.
-
-- Elektronikus napló:
-A rendszer azon része, amely rögzíti a felhasználó által kitöltött kvízek adatait (pontszám, idő, nehézségi szint).
-
-- Felhasználónév:
-Az azonosító, amellyel a diák belép a rendszerbe és amelyhez a kvízek eredményei kapcsolódnak.
-
-- Időmérő:
-A kvíz közben futó mechanizmus, amely jelzi a kérdés(ek) megválaszolásához felhasznált időt.
-
-- Kérdésirány:
-A kvízkérdések előfordulási módja: angol → magyar, illetve magyar → angol fordítási irány.
-
-- Kvíz:
-Olyan feladatsor, amely több kérdésből áll, és amelyben a felhasználónak meg kell jelölnie a helyes választ.
-
-- Nehézségi szint:
-A kérdések kategorizálása a szókincs bonyolultsága alapján (alap, középhaladó, haladó).
-
-- Pontszám:
-A kvízek kitöltése során elért teljesítménymutató, amely a helyes válaszok számán, valamint opcionálisan az időfelhasználáson alapul.
-
-- Progress bar:
-Grafikus elem, amely a kvíz előrehaladását vizuálisan jelzi.
-
-- Toplista:
-A felhasználók rangsora az elért pontszámok alapján, amely ösztönzi a versenyt és motivációt biztosít.
-
-- Reszponzív kialakítás:
-Az alkalmazás olyan megjelenési formája, amely különböző eszközökön (mobil, tablet, asztali gép) is megfelelően működik és kényelmesen használható.
-
-- Sötét/világos mód:
-A felhasználói felület kétféle megjelenítési stílusa, amely a felhasználó igénye szerint váltható.
-
-- Vizuális visszajelzés:
-Azonnali grafikus jelzés a válasz helyességéről (pl. helyes válasz: zöld, hibás válasz: piros).
+| Modul        |  ID  | Név                     |  v. | Kifejtés |
+|--------------|------|------------------------ |-----|----------|
+| Jogosultság  |  K1  | Felhasználónév megadása | 1.0 | A diákok egy felhasználónévvel tudnak bejelentkezni.|
+| Feladattípus |  K2  | Kvíz                    | 1.0 | A kvíz több kérdésből áll, ahol több lehetőség közül kell a helyes választ kiválasztani.|
+| Feladattípus |  K3  | Kétirányú kvíz          | 1.0 | A rendszer lehetővé teszi a kétirányú gyakorlást.|
+| Feladattípus |  K4  | Nehézségi szintek       | 1.0 | A kérdések nehézség szerint csoportosíthatók.|
+| Adatkezelés  |  K5  | Elektronikus Napló      | 1.0 | A felhasználók láthatják az elért eredményeiket, a kvíz pontszámát és a kitöltésre fordított időt.|
+| Adatkezelés  |  K6  | Eredmények mentése      | 1.0 | A rendszer minden kvíz után elmenti a pontszámot a felhasználónévhez.|
+| Felület      |  K7  | Sötét/Világos Mód       | 1.0 | A felhasználók választhatnak világos és sötét mód között.|
+| Felület      |  K8  | Időmérő                 | 1.0 | A kvíz alatt egy időzítő méri a kitöltés idejét. A végeredményt nem befolyásolja, de a naplóban megjelenik.|
+| Felület      |  K9  | Vizuális visszajelzés   | 1.0 | A rendszer azonnali visszajelzést ad a felhasználónak a válaszai helyességéről.|
+| Felület      |  K10 | Progress bar            | 1.0 | A kvíz előrehaladását egy progress bar jelzi.|
+| Felület      |  K11 | Reszponzív kialakítás   | 1.0 | A webes alkalmazás reszponzív, így asztali gépen, mobilon és tableten egyaránt használható.|
+| Felület      |  K12 | Bejelentkezés           | 1.0 | A felhasználók belépnek a felületre.|
 
 ## Szabad riport – A rendszer elvárt működése
 
@@ -213,3 +172,44 @@ A rendszer célja egy szórakoztató, motiváló és könnyen kezelhető nyelvi 
 - A rendszer reszponzív kialakítással rendelkezik, így bármilyen eszközön (asztali gép, tablet, mobil) kényelmesen használható.
 - A felhasználó beállíthatja, hogy világos vagy sötét módban szeretné használni az alkalmazást.
 - A játékos elemek (pontozás, időmérő, progress bar, toplista) segítik a tanulók motivációját és biztosítják, hogy a tanulás ne csak hasznos, hanem szórakoztató is legyen.
+
+## Fogalomtár
+
+- Adminisztrátor:
+Az a felhasználó, aki jogosultsággal rendelkezik új kérdések és feladatok feltöltésére, valamint a rendszer karbantartására.
+
+- Elektronikus napló:
+A rendszer azon része, amely rögzíti a felhasználó által kitöltött kvízek adatait (pontszám, idő, nehézségi szint).
+
+- Felhasználónév:
+Az azonosító, amellyel a diák belép a rendszerbe és amelyhez a kvízek eredményei kapcsolódnak.
+
+- Időmérő:
+A kvíz közben futó mechanizmus, amely jelzi a kérdés(ek) megválaszolásához felhasznált időt.
+
+- Kérdésirány:
+A kvízkérdések előfordulási módja: angol → magyar, illetve magyar → angol fordítási irány.
+
+- Kvíz:
+Olyan feladatsor, amely több kérdésből áll, és amelyben a felhasználónak meg kell jelölnie a helyes választ.
+
+- Nehézségi szint:
+A kérdések kategorizálása a szókincs bonyolultsága alapján (alap, középhaladó, haladó).
+
+- Pontszám:
+A kvízek kitöltése során elért teljesítménymutató, amely a helyes válaszok számán, valamint opcionálisan az időfelhasználáson alapul.
+
+- Progress bar:
+Grafikus elem, amely a kvíz előrehaladását vizuálisan jelzi.
+
+- Toplista:
+A felhasználók rangsora az elért pontszámok alapján, amely ösztönzi a versenyt és motivációt biztosít.
+
+- Reszponzív kialakítás:
+Az alkalmazás olyan megjelenési formája, amely különböző eszközökön (mobil, tablet, asztali gép) is megfelelően működik és kényelmesen használható.
+
+- Sötét/világos mód:
+A felhasználói felület kétféle megjelenítési stílusa, amely a felhasználó igénye szerint váltható.
+
+- Vizuális visszajelzés:
+Azonnali grafikus jelzés a válasz helyességéről (pl. helyes válasz: zöld, hibás válasz: piros).
