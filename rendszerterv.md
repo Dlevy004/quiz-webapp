@@ -129,6 +129,8 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - Elérheti a toplistát.
 - Megtekintheti és módosíthatja a személyes adatait.
 
+![usecase](./rendszerterv%20ábrák/usecase.png)
+
 ### Menü-hierarchiák
 
 - **Bejelentkezés**
