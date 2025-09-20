@@ -215,6 +215,8 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - A közös munkát a GitHub támogatja, amely lehetővé teszi a csapattagok számára, hogy egyszerre dolgozzanak ugyanazon a projekten. 
 - Ezzel átláthatóbbá válik a munka, könnyebb a feladatok felosztása, és a hibák kijavítása is gyorsabban megtörténhet.
 
+![implementation-plan](./rendszerterv%20ábrák/implementation-plan.png)
+
 ### Összefoglalás:
 
 - Az alkalmazás megvalósítása során olyan technológiákat és eszközöket választottunk, amelyek egyszerre teszik lehetővé a könnyű használatot és a hatékony fejlesztést. 
