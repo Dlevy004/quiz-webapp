@@ -100,3 +100,46 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 
 - Webes szabványok:
     - Az alkalmazásnak meg kell felelnie a modern webes szabványoknak (pl. HTML5, CSS3), hogy a különböző böngészőkben is hibamentesen fusson.
+
+## Funkcionális terv
+
+### Rendszerszereplők
+
+- Admin
+- Felhasználó (Diák)
+
+### Rendszerhasználati esetek és lefutásaik
+
+#### ADMIN
+
+- Beléphet bármilyen szerepkörbe, teljes hozzáférése van.
+- Felhasználói adatokat láthat és módosíthat.
+- Felhasználók hozzáadása, törlése.
+- Kvízek és tesztek létrehozása, módosítása, törlése (angol–magyar témakörökben).
+- Feladatok szerkesztése (pl. szókincs, fordítás, nyelvtan).
+- Eredmények és statisztikák megtekintése.
+- Üzenetküldés a felhasználóknak.
+
+#### DIÁK (Felhasználó)
+
+- Képes kvízt kitölteni (angol ↔ magyar irányban).
+- Pontokat, eredményeket szerez a kvízek után.
+- Látja a saját statisztikáit (pl. helyes válaszok száma, fejlődés).
+- Küldhet üzenetet más diákoknak vagy az adminnak.
+- Elérheti a toplistát.
+- Megtekintheti és módosíthatja a személyes adatait.
+
+### Menü-hierarchiák
+
+- **Bejelentkezés**
+  - Bejelentkezés
+  - Regisztráció
+  - Help
+
+- **Main Menü**
+  - Kvíz indítása
+  - Teszt felület (komplexebb feladatsorok)
+  - Eredmények / statisztikák
+  - Toplista
+  - Profil (személyes adatok)
+  - Kijelentkezés
