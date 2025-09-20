@@ -145,3 +145,18 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
   - Kijelentkezés
 
 ![menu_hierarchy](./rendszerterv%20ábrák/menu_hierarchy.png)
+
+## Fizikai környezet
+
+- Az alkalmazás webes platformra készül, asztali böngészőből elérhető.
+- A szerver oldali futtatás felhőalapú környezetben történik.
+- HTTPS titkosítás engedélyezve van a biztonság érdekében.
+- Tűzfal és alapvető hálózati biztonsági szabályok beállítva.
+- Nincsenek megvásárolt komponensek, minden használt technológia nyílt forráskódú.
+
+### Fejlesztői eszközök
+
+- Visual Studio Code
+- Flask (backend keretrendszer Python nyelvhez)
+- JavaScript, HTML, CSS (frontend elkészítéséhez)
+- Git & GitHub (verziókezelés)
