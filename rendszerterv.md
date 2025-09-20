@@ -224,3 +224,99 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - A Flask keretrendszer gondoskodik a szerveroldali logikáról és az adatforgalom kezeléséről, míg a MySQL adatbázis biztosítja az információk biztonságos és rendszerezett tárolását. 
 - A fejlesztői eszközök, mint a Visual Studio Code és a GitHub, támogatják a csapatmunkát és a projekt hosszú távú fenntarthatóságát. 
 - Ezeknek a technológiáknak a kombinációja garantálja, hogy a rendszer könnyen kezelhető, bővíthető és megbízható legyen, miközben hatékonyan szolgálja a nyelvtanulást.
+
+## Tesztterv
+
+A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hibák feltárása, valamint annak biztosítása, hogy a funkciók a követelményeknek megfelelően valósuljanak meg. A tesztelés során kiemelt figyelmet kap a felhasználói élmény, a teljesítmény, valamint az adatok helyes kezelése.
+
+### Tesztelési időszak és célok
+
+- Fejlesztés közbeni tesztelés: minden új funkció implementálása után alapvető egységtesztek futtatása.
+- Alfa teszt: a fejlesztők és belső tesztelők végzik, célja a fő funkciók ellenőrzése és a hibák javítása.
+- Béta teszt: külső felhasználók bevonásával történik, célja a valós környezetben való kipróbálás és a felhasználói visszajelzések gyűjtése.
+
+### Tesztelési környezet
+
+- Böngészők: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari (legfrissebb verziók).
+- Eszközök: Asztali számítógép, laptop, tablet, mobiltelefon.
+- Képernyőméretek: 1280x720, 1366x768, 1920x1080, valamint mobil eszközök tipikus méretei.
+- Operációs rendszerek: Windows 10/11, Android, iOS.
+
+### Backend tesztelés
+
+- Unit tesztek: Minden backend funkcióhoz külön unit tesztek írása
+    - Service réteg tesztelése mock adatokkal
+    - Adatbázis műveletek tesztelése in-memory adatbázissal
+    - API végpontok tesztelése integrációs tesztekkel
+    - Hibakezelés tesztelése különböző hibás forgatókönyvekkel
+- Tesztlefedettség: Minimum 80% kódlefedettség célja
+- Automatizálás: Tesztesetek futtatása CI/CD folyamat részeként
+
+### Frontend tesztelés
+
+- Live Server tesztelés:
+    - Alkalmazás indítása live serverrel lokálisan
+    - Manuális vizuális ellenőrzés minden komponens megjelenéséről
+    - Interakciók tesztelése (gombnyomások, navigáció, űrlapkitöltés)
+- Böngésző DevTools használata:
+    - Console naplók ellenőrzése hibákért és figyelmeztetésekért
+    - Network panel monitorozása API hívások és válaszidők ellenőrzéséhez
+    - Elements panel használata DOM struktúra és stílusok ellenőrzéséhez
+    - Performance panel használta teljesítmény elemzéshez
+    - Application panel használata local storage és session storage ellenőrzéséhez
+- Reszponzív tesztelés:
+    - DevTools eszközzel különböző készülékméretek szimulálása
+    - Touch események tesztelése mobil eszközökhöz
+
+### Alfa teszt
+
+- Az alfa teszt célja a fő funkciók (belépés, kvíz kitöltés, toplista, statisztikák megjelenítése) helyes működésének ellenőrzése. 
+- A tesztet a fejlesztők és kijelölt belső tesztelők végzik. 
+- Hibák esetén a fejlesztési ciklus rövid idő alatt korrigálásra kerül.
+
+### Béta teszt
+
+- A béta teszt célja a felhasználói élmény vizsgálata valós környezetben. 
+- Külső tesztelők kapják meg a hozzáférést, akik különböző eszközökön próbálják ki az alkalmazást. 
+- A visszajelzéseket rögzítjük, és a leggyakrabban előforduló problémák kijavításra kerülnek.
+
+### Tesztelendő funkciók
+
+#### Backend Service:
+
+- Rendszer válaszideje megfelelő legyen (max. 1–2 másodperc).
+- Adatbázisban az adatok helyesen kerüljenek mentésre és visszaadásra.
+- REST API helyes működése: minden kérést pontos válasszal teljesít.
+
+#### Frontend:
+
+- Kvíz kérdések és válaszok megjelenítése hibátlanul.
+- Progress bar megfelelő működése.
+- Azonnali visszajelzés helyessége minden válasz után.
+- Reszponzív design ellenőrzése (mobil, tablet, asztali).
+- Világos/sötét mód helyes váltása.
+
+#### Kvízfunkciók:
+
+- Angol → Magyar és Magyar → Angol irány helyes működése.
+- Különböző nehézségi szintek (alap, középhaladó, haladó) szerinti szűrés.
+- Időmérő működése (indítás, leállítás, pontos idő rögzítése).
+- Helyes és helytelen válaszok helyes kiértékelése.
+
+#### Statisztikák és toplista:
+
+- Összesítő statisztikák helyes számítása (jó/rossz válaszok, kitöltési idő).
+- Toplista helyes sorrendben való megjelenítése.
+
+#### Hibakezelés
+
+- Hibás adatok esetén a rendszer figyelmeztető üzenetet ad.
+- Sikertelen adatbázis-művelet esetén nem engedi tovább a felhasználót.
+- A hibaüzenetek egyértelműek, informatívak, és nem tartalmaznak bizalmas technikai információt.
+
+#### Hibakezelés
+- Minden teszteset eredménye dokumentálásra kerül
+- Hibák rögzítése és nyomon követése bug tracking rendszerben
+- Végteszt jelentés készítése a tesztelés lezárásakor
+
+![test-plan](./rendszerterv%20ábrák/test-plan.png)
