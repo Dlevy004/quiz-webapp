@@ -160,3 +160,19 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - Flask (backend keretrendszer Python nyelvhez)
 - JavaScript, HTML, CSS (frontend elkészítéséhez)
 - Git & GitHub (verziókezelés)
+
+## Architekturális terv
+
+### Backend
+
+- A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySQL-t használunk.
+- A backend Python Flask keretrendszerrel készül.
+- A kliens oldali kéréseket REST API szolgálja ki.
+- Felhasználói autentikáció: bejelentkezés után session alapú vagy token alapú azonosítás biztosítja a jogosultságokat.
+
+### Web kliens
+
+- A webes felület HTML, CSS és JavaScript segítségével készül.
+- A kliens a Flask REST API-hoz kapcsolódik, amelyen keresztül eléri a kvízeket, eredményeket és felhasználói adatokat.
+- Az adatforgalom HTTPS protokollon keresztül zajlik, az illetéktelen hozzáférések ellen védve.
+- A felhasználói interakciók egyszerű és letisztult UI-n keresztül történnek (pl. kvíz kitöltés, toplista megtekintés, profil módosítás).
