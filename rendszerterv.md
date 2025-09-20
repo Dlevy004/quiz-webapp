@@ -118,14 +118,12 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - Kvízek és tesztek létrehozása, módosítása, törlése (angol–magyar témakörökben).
 - Feladatok szerkesztése (pl. szókincs, fordítás, nyelvtan).
 - Eredmények és statisztikák megtekintése.
-- Üzenetküldés a felhasználóknak.
 
 #### DIÁK (Felhasználó)
 
 - Képes kvízt kitölteni (angol ↔ magyar irányban).
 - Pontokat, eredményeket szerez a kvízek után.
 - Látja a saját statisztikáit (pl. helyes válaszok száma, fejlődés).
-- Küldhet üzenetet más diákoknak vagy az adminnak.
 - Elérheti a toplistát.
 - Megtekintheti és módosíthatja a személyes adatait.
 
@@ -145,3 +143,5 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
   - Toplista
   - Profil (személyes adatok)
   - Kijelentkezés
+
+![menu_hierarchy](./rendszerterv%20ábrák/menu_hierarchy.png)
