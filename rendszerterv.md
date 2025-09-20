@@ -176,3 +176,49 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - A kliens a Flask REST API-hoz kapcsolódik, amelyen keresztül eléri a kvízeket, eredményeket és felhasználói adatokat.
 - Az adatforgalom HTTPS protokollon keresztül zajlik, az illetéktelen hozzáférések ellen védve.
 - A felhasználói interakciók egyszerű és letisztult UI-n keresztül történnek (pl. kvíz kitöltés, toplista megtekintés, profil módosítás).
+
+## Implementációs terv
+
+### Web:
+- A rendszer felhasználói felülete teljes egészében webes technológiákra épül, mivel ez biztosítja a könnyű hozzáférést és a platformfüggetlen működést. 
+- A felület kialakításához HTML-t használunk, amely a tartalom és a szerkezet megjelenítéséért felelős. 
+- A weboldal megjelenését és stílusát CSS segítségével valósítjuk meg. 
+- Ezzel biztosítható a reszponzív működés, vagyis a rendszer különböző képernyőméreteken (asztali számítógép, laptop, tablet, mobiltelefon) is megfelelően fog kinézni. 
+- Az interaktív funkciókat JavaScript nyelven implementáljuk. 
+- A JavaScript gondoskodik arról, hogy a kvíz kitöltése közben azonnali visszajelzést kapjon a felhasználó, például jelezze a helyes és helytelen válaszokat. 
+- Emellett ezen keresztül valósul meg a pontszámítás, a progress bar működése, valamint az időmérés és annak kijelzése. 
+- A három technológia együttese teszi lehetővé, hogy a felület egyszerre legyen modern, letisztult és könnyen kezelhető.
+
+### Backend:
+- A szerveroldali működést a Python nyelvhez tartozó Flask keretrendszer biztosítja. 
+- A Flask egy könnyű, de rugalmas megoldás, amely kifejezetten alkalmas kisebb webes alkalmazások gyors fejlesztésére. 
+- A Flask egyik legfontosabb feladata a REST API-k létrehozása. 
+- Ezeken keresztül a kliensoldali alkalmazás kapcsolatot tud teremteni az adatbázissal, és képes adatokat küldeni vagy fogadni. 
+- Például a kvíz indításakor a kliens lekéri az aktuális kérdéseket, a válaszadás után pedig visszaküldi az eredményt, amelyet a rendszer rögzít. 
+- A Flask előnye, hogy jól illeszkedik a Python ökoszisztémához, így egyszerűen bővíthető új funkciókkal, és könnyen integrálható más könyvtárakkal vagy adatbáziskezelőkkel is. 
+- Ezáltal hosszú távon is megbízható alapot ad a rendszernek.
+
+### Adatbázis:
+- Az adatok kezelésére és tárolására MySQL adatbázist alkalmazunk. 
+- Az adatbázis tartalmazza a kvízkérdéseket, a lehetséges válaszokat, valamint az ezekhez tartozó nehézségi szinteket. 
+- Emellett itt kerülnek rögzítésre a felhasználók eredményei is, amelyek később felhasználhatók statisztikák készítéséhez vagy a toplista megjelenítéséhez. 
+- A MySQL kiválóan alkalmas strukturált adatok tárolására, mivel táblákban, jól meghatározott kapcsolatokkal lehet benne rendszerezni az információkat. 
+- Az adatbázis segítségével könnyedén lekérdezhető például, hogy egy adott diák mennyi helyes választ adott, mennyi idő alatt töltötte ki a tesztet, vagy éppen hogyan változott a teljesítménye az elmúlt időszakban.
+- A MySQL választását az is indokolja, hogy stabil, megbízható, széles körben elterjedt és nyílt forráskódú rendszer, amely hosszú távon is biztos alapot nyújt a projekt működéséhez.
+
+### Fejlesztői eszközök:
+
+- A fejlesztés során Visual Studio Code programot használunk, amely egy modern, gyors és jól testreszabható fejlesztői környezet. 
+- Segítségével egyszerre több programozási nyelven is kényelmesen lehet dolgozni, valamint bővítmények révén hatékonyabbá teszi a fejlesztést. 
+- A forráskód kezelése Git verziókövető rendszerrel történik. 
+- Ez biztosítja, hogy minden változtatás naplózva legyen, és bármikor vissza lehessen állni egy korábbi állapotra. 
+- A közös munkát a GitHub támogatja, amely lehetővé teszi a csapattagok számára, hogy egyszerre dolgozzanak ugyanazon a projekten. 
+- Ezzel átláthatóbbá válik a munka, könnyebb a feladatok felosztása, és a hibák kijavítása is gyorsabban megtörténhet.
+
+### Összefoglalás:
+
+- Az alkalmazás megvalósítása során olyan technológiákat és eszközöket választottunk, amelyek egyszerre teszik lehetővé a könnyű használatot és a hatékony fejlesztést. 
+- A HTML, CSS és JavaScript biztosítja a felhasználóbarát, reszponzív és interaktív webes felületet. 
+- A Flask keretrendszer gondoskodik a szerveroldali logikáról és az adatforgalom kezeléséről, míg a MySQL adatbázis biztosítja az információk biztonságos és rendszerezett tárolását. 
+- A fejlesztői eszközök, mint a Visual Studio Code és a GitHub, támogatják a csapatmunkát és a projekt hosszú távú fenntarthatóságát. 
+- Ezeknek a technológiáknak a kombinációja garantálja, hogy a rendszer könnyen kezelhető, bővíthető és megbízható legyen, miközben hatékonyan szolgálja a nyelvtanulást.
