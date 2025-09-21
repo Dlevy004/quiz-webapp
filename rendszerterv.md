@@ -355,7 +355,7 @@ A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hi
 - Nincsenek megvásárolt, kereskedelmi licenchez kötött komponensek. Az alkalmazás teljes egészében nyílt forráskódú technológiákra épül.
 - A JavaScript biztosítja az interaktív funkciókat (pl. azonnali visszajelzés, progress bar, időmérő), míg a HTML és CSS felel a felület szerkezetéért és megjelenéséért.
 - A rendszer használata során engedélyezett a JavaScript futtatása és a cookie-k kezelése, mivel ezek a felhasználói élményhez és a munkamenetek biztonságos kezeléséhez szükségesek.
-
+  
 - Fejlesztői eszközök:
     - Visual Studio Code – fejlesztői környezet
     - Git verziókövetés – forráskód-kezelés
