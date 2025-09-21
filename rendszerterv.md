@@ -332,3 +332,15 @@ A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hi
 - A kapcsolat HTTPS protokollon keresztül történik.
 - A megfelelő működéshez JavaScript és cookie-k engedélyezése javasolt a böngészőben.
 - Az alkalmazás reszponzív, asztali gépen, tableten és mobiltelefonon is használható.
+  
+
+## Karbantartási terv
+
+- Az alkalmazás folyamatos üzemeltetése és karbantartása szükséges, amely magában foglalja a programhibák kijavítását, az új igények miatti módosításokat, valamint a környezeti változásokhoz való alkalmazkodást.
+- Rendszeresen ellenőrizni kell a böngészőkkel és az operációs rendszerekkel való kompatibilitást.
+- Időszakosan új kérdéskörökkel és feladatokkal kell bővíteni a kvízbankot, hogy fenntartsuk a felhasználók érdeklődését és motivációját.
+- A karbantartás típusai:
+    - Corrective Maintenance: a felhasználók által jelzett hibák javítása.
+    - Adaptive Maintenance: a rendszer naprakészen tartása, új környezeti követelményekhez igazítás.
+    - Perfective Maintenance: új funkciók és fejlesztések hozzáadása a jobb felhasználói élmény érdekében.
+    - Preventive Maintenance: olyan problémák elhárítása, amelyek jelenleg nem okoznak hibát, de később komoly gondot jelenthetnek.
