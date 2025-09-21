@@ -101,6 +101,7 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - Webes szabványok:
     - Az alkalmazásnak meg kell felelnie a modern webes szabványoknak (pl. HTML5, CSS3), hogy a különböző böngészőkben is hibamentesen fusson.
 
+
 ## Funkcionális terv
 
 ### Rendszerszereplők
@@ -225,6 +226,24 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - A fejlesztői eszközök, mint a Visual Studio Code és a GitHub, támogatják a csapatmunkát és a projekt hosszú távú fenntarthatóságát. 
 - Ezeknek a technológiáknak a kombinációja garantálja, hogy a rendszer könnyen kezelhető, bővíthető és megbízható legyen, miközben hatékonyan szolgálja a nyelvtanulást.
 
+
+## Fizikai környezet
+
+- Az alkalmazás webes platformra készül, így számítógépen, laptopon, táblagépen és okostelefonon egyaránt elérhető a modern böngészőkön keresztül (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
+- A felhasználók közvetlenül az interneten keresztül csatlakoznak a rendszerhez, külön kliensprogram telepítése nem szükséges.
+- A szerveroldali működést egy Flask alapú backend biztosítja, amely a MySQL adatbázissal kommunikál. A kapcsolat HTTPS protokollon keresztül történik, a hálózat biztonságát tűzfal és alapvető hálózati szabályok garantálják.
+- A rendszer támogatja a reszponzív megjelenést, így a felhasználói élmény minden platformon (mobil, tablet, asztali) egységes.
+- Nincsenek megvásárolt, kereskedelmi licenchez kötött komponensek. Az alkalmazás teljes egészében nyílt forráskódú technológiákra épül.
+- A JavaScript biztosítja az interaktív funkciókat (pl. azonnali visszajelzés, progress bar, időmérő), míg a HTML és CSS felel a felület szerkezetéért és megjelenéséért.
+- A rendszer használata során engedélyezett a JavaScript futtatása és a cookie-k kezelése, mivel ezek a felhasználói élményhez és a munkamenetek biztonságos kezeléséhez szükségesek.
+  
+- Fejlesztői eszközök:
+    - Visual Studio Code – fejlesztői környezet
+    - Git verziókövetés – forráskód-kezelés
+    - GitHub – csapatmunka és közös kódkezelés
+    - MySQL – relációs adatbázis
+    - Flask Framework (Python) – backend keretrendszer
+
 ## Tesztterv
 
 A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hibák feltárása, valamint annak biztosítása, hogy a funkciók a követelményeknek megfelelően valósuljanak meg. A tesztelés során kiemelt figyelmet kap a felhasználói élmény, a teljesítmény, valamint az adatok helyes kezelése.
@@ -344,21 +363,3 @@ A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hi
     - Adaptive Maintenance: a rendszer naprakészen tartása, új környezeti követelményekhez igazítás.
     - Perfective Maintenance: új funkciók és fejlesztések hozzáadása a jobb felhasználói élmény érdekében.
     - Preventive Maintenance: olyan problémák elhárítása, amelyek jelenleg nem okoznak hibát, de később komoly gondot jelenthetnek.
-    - 
-
-## Fizikai környezet
-
-- Az alkalmazás webes platformra készül, így számítógépen, laptopon, táblagépen és okostelefonon egyaránt elérhető a modern böngészőkön keresztül (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
-- A felhasználók közvetlenül az interneten keresztül csatlakoznak a rendszerhez, külön kliensprogram telepítése nem szükséges.
-- A szerveroldali működést egy Flask alapú backend biztosítja, amely a MySQL adatbázissal kommunikál. A kapcsolat HTTPS protokollon keresztül történik, a hálózat biztonságát tűzfal és alapvető hálózati szabályok garantálják.
-- A rendszer támogatja a reszponzív megjelenést, így a felhasználói élmény minden platformon (mobil, tablet, asztali) egységes.
-- Nincsenek megvásárolt, kereskedelmi licenchez kötött komponensek. Az alkalmazás teljes egészében nyílt forráskódú technológiákra épül.
-- A JavaScript biztosítja az interaktív funkciókat (pl. azonnali visszajelzés, progress bar, időmérő), míg a HTML és CSS felel a felület szerkezetéért és megjelenéséért.
-- A rendszer használata során engedélyezett a JavaScript futtatása és a cookie-k kezelése, mivel ezek a felhasználói élményhez és a munkamenetek biztonságos kezeléséhez szükségesek.
-  
-- Fejlesztői eszközök:
-    - Visual Studio Code – fejlesztői környezet
-    - Git verziókövetés – forráskód-kezelés
-    - GitHub – csapatmunka és közös kódkezelés
-    - MySQL – relációs adatbázis
-    - Flask Framework (Python) – backend keretrendszer
