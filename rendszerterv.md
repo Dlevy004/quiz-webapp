@@ -320,3 +320,15 @@ A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hi
 - Végteszt jelentés készítése a tesztelés lezárásakor
 
 ![test-plan](./rendszerterv%20ábrák/test-plan.png)
+
+
+
+
+## Telepítési terv - Webes alkalmazás
+
+- A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari).
+- Külön kliensoldali szoftver telepítése nem szükséges.
+- A felhasználók közvetlenül az internetről, a megadott URL címen keresztül érik el az alkalmazást.
+- A kapcsolat HTTPS protokollon keresztül történik.
+- A megfelelő működéshez JavaScript és cookie-k engedélyezése javasolt a böngészőben.
+- Az alkalmazás reszponzív, asztali gépen, tableten és mobiltelefonon is használható.
