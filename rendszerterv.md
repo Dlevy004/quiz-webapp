@@ -226,6 +226,8 @@ A rendszernek a fejlesztés és üzemeltetés során az alábbi jogszabályoknak
 - A fejlesztői eszközök, mint a Visual Studio Code és a GitHub, támogatják a csapatmunkát és a projekt hosszú távú fenntarthatóságát. 
 - Ezeknek a technológiáknak a kombinációja garantálja, hogy a rendszer könnyen kezelhető, bővíthető és megbízható legyen, miközben hatékonyan szolgálja a nyelvtanulást.
 
+![database_plan](./rendszerterv%20ábrák/database_plan.png)
+
 
 ## Fizikai környezet
 
