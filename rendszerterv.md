@@ -316,8 +316,6 @@ A tesztelés célja a rendszer és komponensei működésének ellenőrzése, hi
 - Hibás adatok esetén a rendszer figyelmeztető üzenetet ad.
 - Sikertelen adatbázis-művelet esetén nem engedi tovább a felhasználót.
 - A hibaüzenetek egyértelműek, informatívak, és nem tartalmaznak bizalmas technikai információt.
-
-#### Hibakezelés
 - Minden teszteset eredménye dokumentálásra kerül
 - Hibák rögzítése és nyomon követése bug tracking rendszerben
 - Végteszt jelentés készítése a tesztelés lezárásakor
