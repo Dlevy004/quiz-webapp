@@ -182,6 +182,58 @@ button, a {
     text-align: center;
 }
 
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.input-field img, .help-wrapper img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.help-wrapper .helpIcon {
+    cursor: pointer;
+}
+
+.help-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    z-index: 99;
+}
+
+.tip {
+    position: absolute;
+    right: 0;
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 14px;
+    line-height: 1.3;
+    width: 230px;
+    display: none;
+}
+
+.help-wrapper:is(:hover, :focus, :active) .tip{
+    display: block;
+}
+
+#sigCheck, label[for="sigCheck"], #logCheck, label[for="logCheck"] {
+    cursor: pointer;
+}
+
+
 @media (min-width: 320px) {
     .form .checkbox-text {
         flex-direction: column;

@@ -1,3 +1,13 @@
+/*help icon visibility*/
+const helpIcons = document.querySelectorAll('.helpIcon');
+helpIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    const tip = icon.nextElementSibling;
+    tip.style.display = tip.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+
 /*Login-Signup change*/
 const container = document.querySelector('.container'),
       signUp = document.querySelector('.signup-link');
@@ -6,9 +16,35 @@ signUp.addEventListener('click', () => {
     container.classList.add('active');
 });
 
+/*registration form validation*/
+let sigUsernameInput = document.getElementById('username');
+let sigEmailInput = document.getElementById('sigEmail');
+let sigPasswordInput = document.getElementById('sigPasswordCreate');
+let sigConfirmInput = document.getElementById('sigPasswordConfirm');
+const sigBtn = document.getElementById('signupBtn');
+
+
 function isValidEmail(email) {
   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   return emailPattern.test(email);
+}
+
+function isValidPassword(password) {
+  let minLength = password.length >= 8;
+  let hasLower = /[a-z]/.test(password);
+  let hasUpper = /[A-Z]/.test(password);
+  let hasNumber = /[0-9]/.test(password);
+  let hasSpecial = /[!@#&$%_+\-]/.test(password);
+  
+  return minLength && hasLower && hasUpper && hasNumber && hasSpecial;
+}
+
+function isValidUsername(username) {
+  return username.length >= 3 && username.length <= 15;
+}
+
+function doPasswordMatch(psw1, psw2) {
+  return psw1 === psw2;
 }
 
 function markInput(input, isValid) {
@@ -20,6 +56,57 @@ function markInput(input, isValid) {
     input.classList.add('error');
   }
 }
+
+sigUsernameInput.addEventListener('input', () => {
+  markInput(sigUsernameInput, isValidUsername(sigUsernameInput.value));
+});
+
+sigEmailInput.addEventListener('input', () => {
+  markInput(sigEmailInput, isValidEmail(sigEmailInput.value));
+});
+
+sigPasswordInput.addEventListener('input', () => {
+  markInput(sigPasswordInput, isValidPassword(sigPasswordInput.value));
+});
+
+sigConfirmInput.addEventListener('input', () => {
+  markInput(sigConfirmInput, doPasswordMatch(sigPasswordInput.value, sigConfirmInput.value));
+});
+
+function allValidInSignup() {
+  let errors = [];
+
+  if (!isValidUsername(sigUsernameInput.value)) {
+    errors.push("A felhasználónévnek 3-15 karakter hosszúnak kell lennie.");
+  }
+  if (!isValidEmail(sigEmailInput.value)) {
+    errors.push("Érvénytelen email cím.");
+  }
+  if (!isValidPassword(sigPasswordInput.value)) {
+    errors.push("A jelszónak legalább 8 karakter hosszúnak kell lennie, és tartalmaznia kell kisbetűt, nagybetűt, számot és speciális karaktert (!@#&$%_+-).");
+  }
+  if (!doPasswordMatch(sigPasswordInput.value, sigConfirmInput.value)) {
+    errors.push("A két jelszó nem egyezik.");
+  }
+
+  if (errors.length > 0) {
+    alert("Hiba:\n- " + errors.join("\n- "));
+    return false;
+  }
+  return true;
+}
+
+sigBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (allValidInSignup()) {
+    container.classList.remove('active');
+    alert("Sikeres regisztráció!");
+  } else {
+    alert("Hiba a regisztrációban");
+  }
+});
+
 
 /*login form validation*/
 let logEmailInput = document.getElementById('logEmail');
