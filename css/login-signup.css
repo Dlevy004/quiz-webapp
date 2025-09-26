@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-font-family: 'Lemon', 'sans-serif';
+    --secondary-font-family: "Poppins", sans-serif;
+    --primary-color: #fbac0f;
+    --secondary-color: #faebd7;
+    --ternary-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    font-family: var(--secondary-font-family);   
+}
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.container .form {
+    padding: 30px;
+    width: 50%;
+    transition: margin-left 0.2s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.2s ease, opacity 0.1s ease;
+}
+
+.form > img {
+    width: 25%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.container .form .title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: 4px solid transparent;
+    font-size: 16px;
+}
+
+.input-field input.success {
+    background-color: rgb(36, 176, 36);
+}
+
+.input-field input.error {
+    background-color: rgba(176, 36, 36, 0.511);
+}
+
+
+.input-field button {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    color: var(--ternary-color);
+    font-size: 17.5px;
+    font-weight: 400;
+    border: 2px solid transparent;
+    transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.input-field button:hover {
+    border: 2px solid var(--ternary-color);
+    background-color: #ededed;
+}
+
+.input-field img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-field .icon {
+    left: 0;
+    padding-left: 5px;
+}
+
+.form .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+#logCheck, label[for="logCheck"] {
+    cursor: pointer;
+}
+
+.checkbox-content input {
+    accent-color: var(--ternary-color);
+    margin-right: 5px;
+}
+
+.form a {
+    text-decoration: none;
+    color: var(--ternary-color);
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .text {
+    color: var(--ternary-color);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.form .button {
+    margin-top: 35px;
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media (min-width: 320px) {
+    .form .checkbox-text {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .form .input-field {
+        margin-top: 15px;
+    }
+
+    .container {
+        border-radius: 0;
+    }
+
+    .container .forms {
+        height: 100dvh;
+    }
+
+    .container.active .forms {
+        height: 100dvh;
+    }
+}
+
+@media (min-width: 425px) {
+    .form .checkbox-text {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .form .input-field {
+        margin-top: 20px;
+    }
+
+    .container {
+        border-radius: 10px;
+    }
+
+    .container.active .forms {
+        height: 620px;
+    }
+
+    .container .forms {
+        height: 520px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form .input-field {
+        margin-top: 30px;
+    }
+}

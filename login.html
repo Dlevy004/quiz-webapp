@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login-signup.css">
+    <title>Quizzy - Bejelentkezés / Regisztráció</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <img src="./images/blueQ.avif" alt="">
+                <span class="title">Bejelentkezés</span>
+
+                <form action="#" id="loginForm" method="post">
+                    <div class="input-field">
+                        <input type="text" name="email" id="logEmail" placeholder="Email cím" required>
+                        <img class="icon" src="./images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Email ikon">
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="password" name="password" id="logPassword" placeholder="Jelszó" required>
+                        <img class="icon" src="./images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Lakat ikon">
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Emlékezz rám</label>
+                        </div>
+
+                        <a href="#" class="text">Elfelejtettem a jelszavam</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <button type="submit" id="loginBtn">Bejelentkezés</button>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Nincs fiókod?
+                        <a href="#" class="text signup-link"><strong>Regisztráció</strong></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js" defer></script>
+</body>
+</html>
