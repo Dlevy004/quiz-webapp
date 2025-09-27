@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link rel="stylesheet" href="profile.css" />
+    </head>
+    <body>
+        <main class="profile-page">
+            <section class="profile-left">
+                <div class="profile-pic">
+                    <img src="profile.webp" alt="Profile picture" />
+                </div>
+                <h2>Felhasználó</h2>
+                <button data-action="username">Profilnév megváltoztatása</button>
+                <button data-action="password">Jelszó megváltoztatása</button>
+                <p>Email: Felhasználó@gmail.com</p>
+            </section>
+
+            <section class="profile-right">
+                <h3>Statok</h3>
+                <ul>
+                    <li>Top 1</li>
+                    <li>Legjobb idő</li>
+                    <li>Legrosszabb idő</li>
+                    <li>Helyes válaszok</li>
+                    <li>Rossz válaszok</li>
+                    <li>Kitöltött tesztek</li>
+                    <li>Pontok</li>
+                </ul>
+            </section>
+        </main>
+
+        <div id="usernameModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label for="newUsername">Új profilnév:</label>
+                    <input
+                        type="text"
+                        id="newUsername"
+                        placeholder="Írd be az új nevet"
+                    />
+                    <div class="modal-buttons">
+                        <button type="button" class="save-btn">Mentés</button>
+                        <button type="button" class="cancel-btn">Mégse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="passwordModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label for="newPassword">Új jelszó:</label>
+                    <div class="password-field">
+                        <input
+                            type="password"
+                            id="newPassword"
+                            placeholder="Írd be az új jelszót"
+                        />
+                        <div class="help-container">
+                            <img
+                                src="help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                alt="info"
+                                class="help-icon"
+                            />
+                            <div class="password-help">
+                                <p>A jelszónak tartalmaznia kell:</p>
+                                <ul>
+                                    <li>Legalább 8 karakter</li>
+                                    <li>kis és nagybetűt</li>
+                                    <li>számot</li>
+                                    <li>speciális karaktert (!@#$%^&*)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="confirmPassword">Jelszó megerősítése:</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Ismételd meg a jelszót"
+                    />
+
+                    <div class="modal-buttons">
+                        <button type="button" class="save-btn">Mentés</button>
+                        <button type="button" class="cancel-btn">Mégse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="profile.js"></script>
+    </body>
+</html>
