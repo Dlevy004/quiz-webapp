@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="hu">
     <head>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Profile</title>
-        <link rel="stylesheet" href="profile.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}" />
     </head>
     <body>
         <main class="profile-page">
             <section class="profile-left">
                 <div class="profile-pic">
-                    <img src="profile.webp" alt="Profile picture" />
+                    <img src="{{ url_for('static', filename='images/profile.webp') }}" alt="Profile picture" />
                 </div>
                 <h2>Felhasználó</h2>
                 <button data-action="username">Profilnév megváltoztatása</button>
@@ -64,7 +64,7 @@
                         />
                         <div class="help-container">
                             <img
-                                src="help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                                src="{{ url_for('static', filename='images/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}"
                                 alt="info"
                                 class="help-icon"
                             />
@@ -94,6 +94,6 @@
             </div>
         </div>
 
-        <script src="profile.js"></script>
+        <script src="{{ url_for('static', filename='profile.js') }}"></script>
     </body>
 </html>
