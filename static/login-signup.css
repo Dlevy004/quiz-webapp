@@ -121,7 +121,7 @@ button, a {
     transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-.input-field button:hover {
+.input-field input[type=submit]:hover {
     border: 2px solid var(--ternary-color);
     background-color: #ededed;
 }
