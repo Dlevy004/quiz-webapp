@@ -1,5 +1,5 @@
 from flask import jsonify, redirect, render_template, url_for
-from quizapp import app
+from quizapp import app, bcrypt, db
 from quizapp.forms import LoginForm, RegistrationForm
 from quizapp.models import User
 
@@ -22,8 +22,17 @@ def login():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        return jsonify({"success": True, "message": "Sikeres regisztráció!"})
-    return jsonify({"success": False, "message": "Hiba a regisztráció során!"})
+        hashed_pw = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_pw)
+        db.session.add(user)
+        db.session.commit()
+        return jsonify({"success": True, "message": f"Sikeres regisztráció, { form.username.data }!"})
+    
+    errors = []
+    for field, field_errors in form.errors.items():
+        for err in field_errors:
+            errors.append(err)
+    return jsonify({"success": False, "message": "\n".join(errors)})
 
 
 @app.route("/index")
