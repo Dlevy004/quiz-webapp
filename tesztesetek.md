@@ -27,3 +27,25 @@
 |Tablet nézet (768px)|Közepes képernyőn való ellenőrzés|Container középen, kerekített szélekkel|Sikeres|
 |Desktop nézet (>1024px)|Széles képernyőn való megtekintés|Layout középen, margók rendben|Sikeres|
 |Gomb hover effekt|Login/Signup gomb fölé a kurzor|Színe megváltozik hover esetén|Sikeres|
+
+## Hero oldal
+|Leírás|Lépések|Várt eredmény|Állapot|
+|------|-------|-------------|--------|
+|Hero oldal, cím, leírás megjelenítése|Oldal megnyitása böngészőben, Live Serverrel|A hero szekció látható, a cím nagyobb betűmérettel jelenik meg, a "Tanulj angolul" szó nem törik sorba, a leírás is olvasható|Sikeres|
+|Kvíz indítása gomb működése|Gombra kattintás|Gomb vizuálisan reagál hover/focus/active állapotokra|Sikeres|
+|Lottie animáció megjelenítése|A `<dotlottie-wc>` animáció ellenőrzése|Animáció látható, autoplay és loop működik|Sikeres|
+|Navigáció fix pozíció|Görgetés az oldalon|Navbar fixen marad a képernyő tetején, nem fedik el a tartalmat|Sikeres|
+|Kijelentkezés gomb működése|Gombra kattintás|Gomb vizuálisan reagál hover/focus/active állapotokra, irányítson át a `login.html`-re|Sikeres|
+
+## Footer
+|Leírás|Lépések|Várt eredmény|Állapot|
+|------|-------|-------------|--------|
+|Footer, wave megjelenítése|Oldal megnyitása böngészőben, Live Serverrel|3 oszlopban jelenik meg a footer-top és két sorban a footer-bottom|Sikeres|
+|Oldal tetejére való ugrás|Kattintás a footerben lévő logora|Visszagörget a lap tetejére|Sikeres|
+|Ikonok animációja|Hover az ikonokra|Felúsznak az ikonok 5 pixellel|Sikeres|
+
+## Főoldal, navbar, footer: design és reszponzív megjelenés
+|Leírás|Lépések|Várt eredmény|Állapot|
+|------|-------|-------------|--------|
+|Mobil nézet (320px-425px)|Kis képernyőn való megnyitás|A főoldal egymás alá helyezi a két szekciót|Sikeres|
+|Tablet és desktop nézet|Közepes és nagy képernyőn való ellenőrzés|A főoldal egymás mellé helyezi a két szekciót, a footer elrendezése is megváltozik|Sikeres|
