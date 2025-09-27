@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login-signup.css') }}">
+    <title>Quizzy - Bejelentkezés / Regisztráció</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <img src="{{ url_for('static', filename='images/blueQ.avif') }}" alt="">
+                <span class="title">Bejelentkezés</span>
+
+                <form action="{{ url_for('login') }}" id="loginForm" method="post">
+                {{ login_form.hidden_tag() }}
+                    <div class="input-field">
+                        {{ login_form.email(class="input", id="logEmail", placeholder="Email cím") }}
+                        <img class="icon" src="{{ url_for('static', filename='images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Email ikon">
+                    </div>
+                    
+                    <div class="input-field">
+                        {{ login_form.password(class="input", id="logPassword", placeholder="Jelszó") }}
+                        <img class="icon" src="{{ url_for('static', filename='images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Emlékezz rám</label>
+                        </div>
+
+                        <a href="#" class="text">Elfelejtettem a jelszavam</a>
+                    </div>
+
+                    <div class="input-field button" id="loginBtn">
+                        {{ login_form.submit(class="input", id="signupBtn")}}
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Nincs fiókod?
+                        <a href="#" class="text signup-link"><strong>Regisztráció</strong></a>
+                    </span>
+                </div>
+            </div>
+
+                        <div class="form signup">
+                <img src="{{ url_for('static', filename='images/blueQ.avif') }}" alt="">
+                <span class="title">Regisztráció</span>
+
+                <form action="{{ url_for('register') }}" id="signUpForm" method="post">
+                    {{ reg_form.hidden_tag() }}
+                    <div class="input-field">
+                        <!-- <input type="text" name="username" id="username" placeholder="Felhasználónév" required> -->
+                        {{ reg_form.username(class="input", id="username", placeholder="Felhasználónév") }}
+                        <img class="icon" src="{{ url_for('static', filename='images/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Profil ikon">
+                    </div>
+
+                    <div class="input-field">
+                        <!-- <input type="text" name="email" id="sigEmail" placeholder="Email cím" required> -->
+                        {{ reg_form.email(class="input", id="sigEmail", placeholder="Email cím") }}
+                        <img class="icon" src="{{ url_for('static', filename='/images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Email ikon">
+                    </div>
+                    
+                    <div class="input-field">
+                        <!-- <input type="password" name="password" id="sigPasswordCreate" placeholder="Jelszó létrehozása" required> -->
+                        {{ reg_form.password(class="input", id="sigPasswordCreate", placeholder="Jelszó létrehozása") }}
+                        <img class="icon" src="{{ url_for('static', filename='/images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
+                        <div class="help-wrapper">
+                            <img class="helpIcon" src="{{ url_for('static', filename='/images/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Segítség ikon">
+                            <div class="tip">
+                                <p>
+                                    A jelszónak tartalmaznia kell: <br>
+                                    - legalább 8 karaktert <br>
+                                    - kis és nagybetűt <br>
+                                    - számot <br>
+                                    - speciális karaktert (!@#&$%_+-)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-field">
+                        <!-- <input type="password" name="password" id="sigPasswordConfirm" placeholder="Jelszó megerősítése" required> -->
+                        {{ reg_form.confirm_password(class="input", id="sigPasswordConfirm", placeholder="Jelszó megerősítése") }}
+                        <img class="icon" src="{{ url_for('static', filename='/images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
+                    </div>
+
+                    <div class="input-field button" id="signupBtn">
+                        <!-- <button type="submit">Regisztráció</button> -->
+                        {{ reg_form.submit(class="input", id="signupBtn")}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='login.js') }}" defer></script>
+</body>
+</html>

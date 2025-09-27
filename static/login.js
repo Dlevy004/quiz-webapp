@@ -96,15 +96,26 @@ function allValidInSignup() {
   return true;
 }
 
-sigBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+const signUpForm = document.getElementById("signUpForm");
 
-  if (allValidInSignup()) {
+signUpForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    if (!allValidInSignup()) return;
+
+    const formData = new FormData(signUpForm);
+    const res = await fetch("/register", {
+        method: "POST",
+        body: formData
+    });
+    const data = await res.json();
+
+    alert(data.message);
+
+    if (data.success) {
     container.classList.remove('active');
-    alert("Sikeres regisztráció!");
-  } else {
-    alert("Hiba a regisztrációban");
-  }
+    signUpForm.reset();
+    }
 });
 
 
