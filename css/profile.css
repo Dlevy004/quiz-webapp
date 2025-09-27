@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-font-family: 'Lemon', sans-serif;
+    --secondary-font-family: 'Poppins', sans-serif;
+    --primary-color: #fbac0f;
+    --secondary-color: #faebd7;
+    --ternary-color: black;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    margin: 0;
+    font-family: var(--secondary-font-family);
+    background-color: var(--secondary-color);
+}
+
+.profile-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.profile-left {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid var(--ternary-color);
+}
+
+.profile-left img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--ternary-color);
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 5px;
+}
+
+.profile-left h2 {
+    font-family: var(--primary-font-family);
+    margin: 10px 0;
+}
+
+.profile-left p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--ternary-color);
+}
+
+.profile-left button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    color: var(--ternary-color);
+    font-size: 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.profile-left button:hover {
+    background-color: #ededed;
+    border: 2px solid var(--ternary-color);
+}
+
+.profile-right {
+    background: #fff;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-right h3 {
+    text-align: center;
+    font-family: var(--primary-font-family);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.profile-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-right li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: var(--secondary-color);
+    font-size: 16px;
+    font-family: var(--secondary-font-family);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px; 
+    border-radius: 10px;
+    width: 350px; 
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 10px; 
+    margin-right: 0; 
+}
+
+.modal-content input {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    display: block; 
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.save-btn {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-field {
+    width: calc(100% - 20px); 
+    margin-left: 10px; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex; 
+    align-items: center;
+}
+
+.password-field input {
+    flex-grow: 1;
+    width: auto;
+    margin: 0; 
+}
+
+.help-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.help-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.password-help {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.password-help p {
+    margin: 0 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.password-help ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.help-container:hover .password-help {
+    display: block;
+}
+
+input.invalid {
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+}
+
+input.valid {
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+}
