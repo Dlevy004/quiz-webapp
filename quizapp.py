@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, jsonify, redirect, render_template, url_for
 from forms import LoginForm, RegistrationForm
 
 app = Flask(__name__)
@@ -23,5 +23,5 @@ def login():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
-        return redirect(url_for("auth"))
-    return render_template("login.html", login_form=LoginForm(), reg_form=form)
+        return jsonify({"success": True, "message": "Sikeres regisztráció!"})
+    return jsonify({"success": False, "message": "Hiba a regisztráció során!"})
