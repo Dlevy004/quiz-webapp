@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/login-signup.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login-signup.css') }}">
     <title>Quizzy - Bejelentkezés / Regisztráció</title>
 </head>
 
@@ -12,18 +12,18 @@
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <img src="./images/blueQ.avif" alt="">
+                <img src="{{ url_for('static', filename='images/blueQ.avif') }}" alt="">
                 <span class="title">Bejelentkezés</span>
 
                 <form action="#" id="loginForm" method="post">
                     <div class="input-field">
                         <input type="text" name="email" id="logEmail" placeholder="Email cím" required>
-                        <img class="icon" src="./images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Email ikon">
+                        <img class="icon" src="{{ url_for('static', filename='images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Email ikon">
                     </div>
                     
                     <div class="input-field">
                         <input type="password" name="password" id="logPassword" placeholder="Jelszó" required>
-                        <img class="icon" src="./images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Lakat ikon">
+                        <img class="icon" src="{{ url_for('static', filename='images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
                     </div>
 
                     <div class="checkbox-text">
@@ -48,25 +48,25 @@
             </div>
 
                         <div class="form signup">
-                <img src="./images/blueQ.avif" alt="">
+                <img src="{{ url_for('static', filename='images/blueQ.avif') }}" alt="">
                 <span class="title">Regisztráció</span>
 
                 <form action="#" id="signUpForm" method="post">
                     <div class="input-field">
                         <input type="text" name="username" id="username" placeholder="Felhasználónév" required>
-                        <img class="icon" src="./images/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Profil ikon">
+                        <img class="icon" src="{{ url_for('static', filename='images/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Profil ikon">
                     </div>
 
                     <div class="input-field">
                         <input type="text" name="email" id="sigEmail" placeholder="Email cím" required>
-                        <img class="icon" src="./images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Email ikon">
+                        <img class="icon" src="{{ url_for('static', filename='/images/mail_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Email ikon">
                     </div>
                     
                     <div class="input-field">
                         <input type="password" name="password" id="sigPasswordCreate" placeholder="Jelszó létrehozása" required>
-                        <img class="icon" src="./images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Lakat ikon">
+                        <img class="icon" src="{{ url_for('static', filename='/images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
                         <div class="help-wrapper">
-                            <img class="helpIcon" src="./images/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Segítség ikon">
+                            <img class="helpIcon" src="{{ url_for('static', filename='/images/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Segítség ikon">
                             <div class="tip">
                                 <p>
                                     A jelszónak tartalmaznia kell: <br>
@@ -81,7 +81,7 @@
                     
                     <div class="input-field">
                         <input type="password" name="password" id="sigPasswordConfirm" placeholder="Jelszó megerősítése" required>
-                        <img class="icon" src="./images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Lakat ikon">
+                        <img class="icon" src="{{ url_for('static', filename='/images/lock_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Lakat ikon">
                     </div>
 
                     <div class="input-field button" id="signupBtn">
@@ -92,6 +92,6 @@
         </div>
     </div>
 
-    <script src="./js/login.js" defer></script>
+    <script src="{{ url_for('static', filename='login.js') }}" defer></script>
 </body>
 </html>
