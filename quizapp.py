@@ -15,7 +15,7 @@ def auth():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        return redirect(url_for("auth"))
+        return redirect(url_for("index"))
     return render_template("login.html", login_form=form, reg_form=RegistrationForm())
 
 
@@ -25,3 +25,8 @@ def register():
     if form.validate_on_submit():
         return jsonify({"success": True, "message": "Sikeres regisztráció!"})
     return jsonify({"success": False, "message": "Hiba a regisztráció során!"})
+
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
