@@ -1,5 +1,7 @@
 # Tesztesetek
+
 ## Bejelentkezés oldal
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Email mező kötelező|Üresen hagy|Sikertelen bejelentkezés, hibaüzenettel|Sikeres|
@@ -11,6 +13,7 @@
 |Átlépés signup oldalra|Klikk a "Nincs fiókod? Regisztráció" linkre|Átvált a signup form-ra|Sikeres|
 
 ## Regisztrációs oldal
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Username üres|A felhasználónév mező üresen hagyása|Sikertelen regisztráció, hibaüzenettel|Sikeres|
@@ -21,6 +24,7 @@
 |Sikeres regisztráció|Helyes username, email, jelszó, jelszó megerősítés megadása|Alert és átirányítás történik a bejelentkezésre|Sikeres|
 
 ## Bejelentkezés és regisztráció: design és reszponzív megjelenés
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Mobil nézet (320px-425px)|Kis képernyőn való megnyitás|Container teljes szélesség, border-radius nincs|Sikeres|
@@ -29,6 +33,7 @@
 |Gomb hover effekt|Login/Signup gomb fölé a kurzor|Színe megváltozik hover esetén|Sikeres|
 
 ## Hero oldal
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Hero oldal, cím, leírás megjelenítése|Oldal megnyitása böngészőben, Live Serverrel|A hero szekció látható, a cím nagyobb betűmérettel jelenik meg, a "Tanulj angolul" szó nem törik sorba, a leírás is olvasható|Sikeres|
@@ -38,6 +43,7 @@
 |Kijelentkezés gomb működése|Gombra kattintás|Gomb vizuálisan reagál hover/focus/active állapotokra, irányítson át a `login.html`-re|Sikeres|
 
 ## Footer
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Footer, wave megjelenítése|Oldal megnyitása böngészőben, Live Serverrel|3 oszlopban jelenik meg a footer-top és két sorban a footer-bottom|Sikeres|
@@ -45,12 +51,14 @@
 |Ikonok animációja|Hover az ikonokra|Felúsznak az ikonok 5 pixellel|Sikeres|
 
 ## Főoldal, navbar, footer: design és reszponzív megjelenés
+
 |Leírás|Lépések|Várt eredmény|Állapot|
 |------|-------|-------------|--------|
 |Mobil nézet (320px-425px)|Kis képernyőn való megnyitás|A főoldal egymás alá helyezi a két szekciót|Sikeres|
 |Tablet és desktop nézet|Közepes és nagy képernyőn való ellenőrzés|A főoldal egymás mellé helyezi a két szekciót, a footer elrendezése is megváltozik|Sikeres|
 
-## Profil oldal 
+## Profil oldal
+
 | Leírás                        | Lépések                                              | Várt eredmény                              | Állapot |
 |-------------------------------|------------------------------------------------------|--------------------------------------------|---------|
 | Mégse gomb                    | Modal megnyitása → „Mégse” gomb                      | Modal bezárul, változtatás nélkül          | Sikeres |
@@ -65,8 +73,33 @@
 | Súgó ikon                     | Sugó ikonra kattintunk                               | Megjelenik a jelszó követelmények listája  | Sikeres |
 
 ## Profil oldal: Reszponzív megjelenés
+
 | Leírás                    | Lépések                        | Várt eredmény                               | Állapot |
 |---------------------------|--------------------------------|---------------------------------------------|---------|
 | Tablet nézet (768px)      | Közepes képernyőn megnyitás    | Grid tartja az arányokat                    | Sikeres |
 | Nagy képernyő (>1024px)   | Teljes képernyőn való megnyitás| Középen igazított kártya                    | Sikeres |
 | Gomb hover effekt         | Egérkurzor fölé a gombokra     | Szín- és keretváltozás megjelenik           | Sikeres |
+
+## Authentikáció: Regisztráció
+
+| Leírás                   | Lépések                                       | Várt eredmény                    | Állapot |
+|--------------------------|-----------------------------------------------|----------------------------------|---------|
+| Megfelelő, új adatokkal  | Regisztráció próba jó adatokkal               | Új felhasználó létrejön          | Sikeres |
+| Nem megfelelő adatokkal  | Regisztráció próba rossz adatokkal            | Nem jön létre új felhasználó     | Sikeres |
+| Létező email címmel      | Regisztráció próba létező email címmel        | Nem jön létre új felhasználó     | Sikeres |
+| Létező felhasználónévvel | Regisztráció próba létező felhasználónévvel   | Nem jön létre új felhasználó     | Sikeres |
+
+## Authentikáció: Bejelentkezés
+
+| Leírás                            | Lépések                        | Várt eredmény                    | Állapot |
+|-----------------------------------|--------------------------------|----------------------------------|---------|
+| Létező felhasználói adatokkal     | Belépés létező adatokkal       | Bejelentkezés megtörtént         | Sikeres |
+| Hibás felhasználói adatokkal      | Belépés nem létező adatokkal   | Bejelentkezés nem történt meg    | Sikeres |
+| Hibás jelszóval                   | Belépés rossz jelszóval        | Bejelentkezés nem történt meg    | Sikeres |
+
+## Authentikáció: Profil
+
+| Leírás                       | Lépések                                         | Várt eredmény                                | Állapot |
+|------------------------------|-------------------------------------------------|----------------------------------------------|---------|
+| Felhasználónév megjelenítése | Bejelentkezett felhasználó profil fülre navigál | Aktuális felhasználó neve megjelenik         | Sikeres |
+| Email cím megjelenítése      | Bejelentkezett felhasználó profil fülre navigál | Aktuális felhasználó email címe megjelenik   | Sikeres |
