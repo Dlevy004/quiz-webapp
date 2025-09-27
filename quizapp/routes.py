@@ -1,13 +1,8 @@
-from flask import Flask, jsonify, redirect, render_template, url_for
-from flask_sqlalchemy import SQLAlchemy
-from forms import LoginForm, RegistrationForm
+from flask import jsonify, redirect, render_template, url_for
+from quizapp import app
+from quizapp.forms import LoginForm, RegistrationForm
+from quizapp.models import User
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'aa81185a23c8ff7da130ada119bf880a'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-db = SQLAlchemy(app)
-
-from models import User
 
 @app.route("/")
 @app.route("/auth")
@@ -39,7 +34,3 @@ def index():
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
