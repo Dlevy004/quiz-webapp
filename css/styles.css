@@ -255,3 +255,96 @@ nav div {
     font-size: clamp(0.75rem, 2.5vw, 0.95rem);
     gap: 0.25rem;
 }
+
+@media (min-width: 320px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .footer-left .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 20%;
+    }
+
+    .footer-left,
+    .footer-mid,
+    .footer-right {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .footer-right {
+        flex-direction: column-reverse;
+    }
+
+    .footer-left img,
+    .footer-right img {
+        width: clamp(28px, 9.5vw, 40px);
+        height: auto;
+    }
+
+    .footer-mid {
+        order: -1;
+        margin-bottom: 0.25rem;
+    }
+}
+
+@media (min-width: 425px) {
+    nav {
+        width: 80dvw;
+        max-width: 600px;
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+@media (min-width: 700px) {
+    .footer-top {
+        flex-direction: row;
+    }
+
+    .footer-mid {
+        order: 0;
+    }
+
+    .footer-right {
+        align-items: start;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-left .social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 20%;
+    }
+} 
+
+@media (min-width: 768px) {
+    .hero-wrapper {
+        flex-direction: row;
+        margin: 0
+    }
+
+    .hero-left {
+        padding: 0 0 0 20%;
+        width: 50%;
+    }
+
+    .hero-right {
+        padding: 0 0 0 0;
+    }
+
+    .hero-right dotlottie-wc {
+        min-width: 450px;
+        width: 75dvw;
+        max-width: 600px;
+    }
+}

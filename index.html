@@ -9,35 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lemon&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <title>Quizzy</title>
+
+    <meta
+        name="description"
+        content="Quizzy | Tanulj angolul játékosan! Fejleszd az angol-magyar tudásod játékos kvízekkel, azonnali visszajelzéssel, topistával és nehézségi szintekkel!">
 </head>
 
 <body>
     <header>
-        <nav>
-            <img src="./images/yellowQ.avif" alt="logo" loading="lazy">
+        <nav aria-label="Fő navigáció">
+            <img src="./images/yellowQ.avif" alt="Quizzy logo" loading="lazy">
             <div>
                 <div class="nav-buttons">
-                    <a href="#">
+                    <a href="#" aria-label="Profil">
                         <img src="./images/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="profile icon" loading="lazy">
                     </a>
                 </div>
-                <button class="logout-btn">Kijelentkezés</button>
+                <button class="logout-btn" aria-label="Kijelentkezés a fiókból">Kijelentkezés</button>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" aria-labelledby="hero-heading">
             <div class="hero-wrapper">
                 <div class="hero-left">
                     <h1><span style="white-space: nowrap">Tanulj angolul</span> játékosan!</h1>
                     <p>Fejleszd az angol-magyar tudásod játékos kvízekkel!</p>
-                    <button>Kvíz indítása</button>
+                    <button aria-label="Kvíz indítása most">Kvíz indítása</button>
                 </div>
                 <div class="hero-right">
                     <dotlottie-wc
                         src="https://lottie.host/abc32d37-6683-410e-abe5-883c22aa8c3a/MAZWJdZnbL.lottie"
-                        autoplay loop>
+                        autoplay loop
+                        aria-label="Angol tanulást bemutató illusztráció">
                     </dotlottie-wc>
                 </div>
             </div>
@@ -59,28 +64,34 @@
                 <p>Keresd social felületeinket!</p>
                 <div class="social-icons">
                     <div class="footer-icon">
-                        <a href="#"><img src="./images/facebook_icon_137647.svg" alt="Facebook icon" loading="lazy"></a>
+                        <a href="#" target="_blank" aria-label="Quizzy Facebook oldala">
+                            <img src="./images/facebook_icon_137647.svg" alt="Facebook icon" loading="lazy">
+                        </a>
                     </div>
                     <div class="footer-icon">
-                        <a href="#"><img src="./images/Instagram_New_icon-icons.com_69008.svg" alt="Instagram icon" loading="lazy"></a>
+                        <a href="#" target="_blank" aria-label="Quizzy Instagram oldala">
+                            <img src="./images/Instagram_New_icon-icons.com_69008.svg" alt="Instagram icon" loading="lazy">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-mid">
-                <a href="#"><img src="./images/yellowQ.avif" alt="Quizzy logo" loading="lazy"></a>
+                <a href="#" aria-label="Ugrás az oldal tetejére">
+                    <img src="./images/yellowQ.avif" alt="Quizzy logo" loading="lazy">
+                </a>
             </div>
             <div class="footer-right">
                 <div class="footer-icon">
-                    <a href="#" data-tooltip="Adatkezelési tájékoztató">
+                    <a href="#" target="_blank" aria-label="Adatkezelési tájékoztató">
                         <img src="./images/shield_24dp_000000_FILL1_wght400_GRAD0_opsz24.svg" 
-                            alt="Adatkezelési tájékoztató ikon"
+                            alt="Adatkezelési tájékoztató icon"
                             loading="lazy">
                         <p style="white-space: nowrap;">Adatkezelési tájékoztató</p>
                     </a>
                 </div>
                 <div class="footer-icon">
-                    <a href="mailto:">
-                        <img src="./images/mail_24dp_000000_FILL1_wght400_GRAD0_opsz24.svg" alt="Mail ikon" loading="lazy">
+                    <a href="mailto:" aria-label="Kapcsolatfelvétel e-mailben">
+                        <img src="./images/mail_24dp_000000_FILL1_wght400_GRAD0_opsz24.svg" alt="Mail icon" loading="lazy">
                         <p style="white-space: nowrap;">Kapcsolat</p>
                     </a>
                 </div>
