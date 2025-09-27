@@ -150,11 +150,8 @@ function allValidInLogin() {
 }
 
 loginBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-
-  if (allValidInLogin()) {
-    window.location.href = "index.html";
-  } else {
-    alert("Hiba a bejelentkezés során. Kérjük, ellenőrizze a megadott adatokat.");
+  if (!allValidInLogin()) {
+    e.preventDefault();
+    alert("Hiba a bejelentkezés során...");
   }
 });
