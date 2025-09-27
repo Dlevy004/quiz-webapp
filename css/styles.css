@@ -1,0 +1,155 @@
+:root {
+    --primary-font-family: 'Lemon', 'sans-serif';
+    --secondary-font-family: "Poppins", sans-serif;
+    --primary-color: #fbac0f;
+    --secondary-color: #faebd7;
+    --ternary-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--primary-font-family); 
+}
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100dvw;
+    max-height: 15%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    padding: 10px 20px;
+    z-index: 99;
+}
+
+
+nav img:first-of-type {
+    width: 20vw;
+    max-width: 60px;
+    height: auto;
+}
+
+nav .nav-buttons img {
+  width: 40px;
+  height: 40px;
+  max-width: 60px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.logout-btn {
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--ternary-color);
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: all 0.2s ease-in-out;
+}
+
+.logout-btn:is(:hover, :active, :focus) {
+    background-color: rgba(255, 0, 0, 0.211);
+    border: 3px solid red;
+}
+
+#hero {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, var(--secondary-color) 50%, #fbac0f72 100%);
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6.5rem 1rem 0 1rem;
+}
+
+.hero-left {
+    padding-bottom: 1rem;
+}
+
+.hero-left h1 {
+    padding-bottom: 15px;
+    font-weight: 20;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.hero-left p {
+    padding-bottom: 15px;
+    font-family: var(--secondary-font-family);
+    line-height: 1.3;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+}
+
+.hero-left button {
+    background-color: var(--primary-color);
+    border: 3px solid var(--ternary-color);
+    border-radius: 5px;
+    padding: 0.5rem clamp(0.25rem, 5vw, 1rem);
+    color: var(--ternary-color);
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.477);
+}
+
+.hero-left button:is(:hover, :focus, :active) {
+    background-color: #fbac0f2e;
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.477);
+}
+
+.hero-right {
+    margin: 1rem 0;
+}
+
+.hero-right dotlottie-wc {
+    min-width: 450px;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
