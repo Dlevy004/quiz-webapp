@@ -11,7 +11,7 @@
         <main class="profile-page">
             <section class="profile-left">
                 <div class="profile-pic">
-                    <img src="{{ url_for('static', filename='images/profile.webp') }}" alt="Profile picture" />
+                    <img src="{{ image_file }}" alt="Profile picture" />
                 </div>
                 <h2>{{ current_user.username }}</h2>
                 <button data-action="username">Profilnév megváltoztatása</button>
@@ -36,15 +36,18 @@
         <div id="usernameModal" class="modal hidden">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form>
+                <form action="{{ url_for('profile') }}", id="updateUsernameForm", method="post">
+                    {{ update_username_form.hidden_tag() }}
                     <label for="newUsername">Új profilnév:</label>
-                    <input
+                    <!-- <input
                         type="text"
                         id="newUsername"
                         placeholder="Írd be az új nevet"
-                    />
+                    /> -->
+                    {{ update_username_form.username(class="input", id="newUsername", placeholder="Írd be az új nevet") }}
                     <div class="modal-buttons">
-                        <button type="button" class="save-btn">Mentés</button>
+                        <button type="submit" class="save-btn">{{ update_username_form.submit.label.text }}</button>
+                        <!-- {{ update_username_form.submit(type="button", class="input save-btn") }} -->
                         <button type="button" class="cancel-btn">Mégse</button>
                     </div>
                 </form>
