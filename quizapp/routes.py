@@ -1,11 +1,19 @@
 from flask import jsonify, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from quizapp import app, bcrypt, db
-from quizapp.forms import LoginForm, RegistrationForm
+from quizapp.forms import LoginForm, RegistrationForm, UpdatePictureForm, UpdateUsernameForm
 from quizapp.models import User
+
+import os, secrets
 
 
 @app.route("/")
+@app.route("/index")
+@login_required
+def index():
+    return render_template("index.html")
+
+
 @app.route("/auth")
 def auth():
     return render_template("login.html", login_form=LoginForm(), reg_form=RegistrationForm())
@@ -51,13 +59,53 @@ def logout():
     return redirect(url_for('auth'))
 
 
-@app.route("/index")
-@login_required
-def index():
-    return render_template("index.html")
+def save_picture(form_picture):
+    random_hex = secrets.token_hex(8)
+    _, file_ext = os.path.splitext(form_picture.filename)
+    picture_file_name = random_hex + file_ext
+    picture_path = os.path.join(app.root_path ,'static/profile_pics', picture_file_name)
+    form_picture.save(picture_path)
+    return picture_file_name
 
 
-@app.route("/profile")
+@app.route("/profile", methods = ['GET', 'POST'])
 @login_required
 def profile():
-    return render_template("profile.html")
+    update_username_form = UpdateUsernameForm()
+    update_username_form.username.data = current_user.username
+
+    update_picture_form = UpdatePictureForm()
+
+    image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+    return render_template("profile.html",
+                           image_file=image_file,
+                           update_username_form=update_username_form,
+                           update_picture_form=update_picture_form
+                           )
+
+
+@app.route("/update_username", methods=["POST"])
+@login_required
+def update_username():
+    form = UpdateUsernameForm()
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        db.session.commit()
+        return jsonify({"success": True, "message": "Profilnév sikeresen módosítva!", "new_username": current_user.username})
+
+    errors = [err for field_errors in form.errors.values() for err in field_errors]
+    return jsonify({"success": False, "message": "\n".join(errors)})
+
+
+@app.route("/update_picture", methods=["POST"])
+@login_required
+def update_picture():
+    form = UpdatePictureForm()
+    if form.validate_on_submit():
+        picture_file = save_picture(form.picture.data)
+        current_user.image_file = picture_file
+        db.session.commit()
+        return jsonify({"success": True, "message": "Profilkép sikeresen módosítva!", "new_picture": current_user.image_file})
+
+    errors = [err for field_errors in form.errors.values() for err in field_errors]
+    return jsonify({"success": False, "message": "\n".join(errors)})
