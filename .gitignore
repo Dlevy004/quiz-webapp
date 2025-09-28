@@ -261,4 +261,6 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/flask,python
 
-quizapp/static/profile_pics
+quizapp/static/profile_pics/*
+!quizapp/static/profile_pics/profile.webp
+
