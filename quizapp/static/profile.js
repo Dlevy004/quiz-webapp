@@ -60,3 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+const updateUsernameForm = document.getElementById("updateUsernameForm");
+
+updateUsernameForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(updateUsernameForm);
+    const res = await fetch("/profile", {
+        method: "POST",
+        body: formData
+    });
+    const data = await res.json();
+
+    alert(data.message);
+
+    if (data.success) {
+        window.location.reload();
+    }
+});

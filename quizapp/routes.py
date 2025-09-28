@@ -1,11 +1,17 @@
 from flask import jsonify, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from quizapp import app, bcrypt, db
-from quizapp.forms import LoginForm, RegistrationForm
+from quizapp.forms import LoginForm, RegistrationForm, UpdateUsernameForm
 from quizapp.models import User
 
 
 @app.route("/")
+@app.route("/index")
+@login_required
+def index():
+    return render_template("index.html")
+
+
 @app.route("/auth")
 def auth():
     return render_template("login.html", login_form=LoginForm(), reg_form=RegistrationForm())
@@ -51,13 +57,21 @@ def logout():
     return redirect(url_for('auth'))
 
 
-@app.route("/index")
-@login_required
-def index():
-    return render_template("index.html")
-
-
-@app.route("/profile")
+@app.route("/profile", methods = ['GET', 'POST'])
 @login_required
 def profile():
-    return render_template("profile.html")
+    update_username_form = UpdateUsernameForm()
+    if update_username_form.validate_on_submit():
+        current_user.username = update_username_form.username.data
+        db.session.commit()
+        return jsonify({"success": True, "message": "Profilnév sikeresen módosítva!", "new_username": current_user.username})
+    elif request.method == 'GET':
+        update_username_form.username.data = current_user.username
+    else:
+        errors = []
+        for field, field_errors in update_username_form.errors.items():
+            for err in field_errors:
+                errors.append(err)
+        return jsonify({"success": False, "message": "\n".join(errors)})
+    image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+    return render_template("profile.html", image_file=image_file, update_username_form=update_username_form)
