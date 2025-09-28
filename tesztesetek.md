@@ -99,7 +99,13 @@
 
 ## Authentikáció: Profil
 
-| Leírás                       | Lépések                                         | Várt eredmény                                | Állapot |
-|------------------------------|-------------------------------------------------|----------------------------------------------|---------|
-| Felhasználónév megjelenítése | Bejelentkezett felhasználó profil fülre navigál | Aktuális felhasználó neve megjelenik         | Sikeres |
-| Email cím megjelenítése      | Bejelentkezett felhasználó profil fülre navigál | Aktuális felhasználó email címe megjelenik   | Sikeres |
+| Leírás                                    | Lépés                         | Várt eredmény                 | Állapot |
+|-------------------------------------------|-------------------------------|-------------------------------|---------|
+| Felhasználónév megjelenítése              | Profil fülre navigálás        | Aktuális név megjelenik       | Sikeres |
+| Email cím megjelenítése                   | Profil fülre navigálás        | Aktuális email megjelenik     | Sikeres |
+| Profilkép megjelenítése                   | Profil fülre navigálás        | Aktuális kép megjelenik       | Sikeres |
+| Felhasználónév változtatás - nem megfelelő| Érvénytelen név megadása      | Hibaüzenet                    | Sikeres |
+| Felhasználónév változtatás - foglalt      | Már létező név megadása       | Hibaüzenet                    | Sikeres |
+| Felhasználónév változtatás - érvényes     | Szabad név megadása           | Sikeres módosítás             | Sikeres |
+| Profilkép változtatás - formátum hiba     | Nem támogatott fájlformátum   | Hibaüzenet                    | Sikeres |
+| Profilkép változtatás - érvényes          | Támogatott fájlformátum       | Sikeres módosítás             | Sikeres |
