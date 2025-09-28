@@ -15,6 +15,7 @@
                 </div>
                 <h2>{{ current_user.username }}</h2>
                 <button data-action="username">Profilnév megváltoztatása</button>
+                <button data-action="picture">Profilkép megváltoztatása</button>
                 <button data-action="password">Jelszó megváltoztatása</button>
                 <p>Email: {{ current_user.email }}</p>
             </section>
@@ -36,18 +37,27 @@
         <div id="usernameModal" class="modal hidden">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form action="{{ url_for('profile') }}", id="updateUsernameForm", method="post">
+                <form action="{{ url_for('update_username') }}" id="updateUsernameForm" method="post">
                     {{ update_username_form.hidden_tag() }}
                     <label for="newUsername">Új profilnév:</label>
-                    <!-- <input
-                        type="text"
-                        id="newUsername"
-                        placeholder="Írd be az új nevet"
-                    /> -->
                     {{ update_username_form.username(class="input", id="newUsername", placeholder="Írd be az új nevet") }}
                     <div class="modal-buttons">
                         <button type="submit" class="save-btn">{{ update_username_form.submit.label.text }}</button>
-                        <!-- {{ update_username_form.submit(type="button", class="input save-btn") }} -->
+                        <button type="button" class="cancel-btn">Mégse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="pictureModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="{{ url_for('update_picture') }}" id="updatePictureForm" method="post" enctype="multipart/form-data">
+                    {{ update_picture_form.hidden_tag() }}
+                    <label for="picture">Fájl kiválasztása:</label>
+                    {{ update_picture_form.picture() }}
+                    <div class="modal-buttons">
+                        <button type="submit" class="save-btn">{{ update_picture_form.submit.label.text }}</button>
                         <button type="button" class="cancel-btn">Mégse</button>
                     </div>
                 </form>
@@ -67,7 +77,7 @@
                         />
                         <div class="help-container">
                             <img
-                                src="{{ url_for('static', filename='images/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}"
+                                src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}"
                                 alt="info"
                                 class="help-icon"
                             />

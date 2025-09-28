@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const usernameModal = document.getElementById("usernameModal");
+    const pictureModal = document.getElementById("pictureModal");
     const passwordModal = document.getElementById("passwordModal");
 
     const usernameBtn = document.querySelector('button[data-action="username"]');
+    const pictureBtn = document.querySelector('button[data-action="picture"]');
     const passwordBtn = document.querySelector('button[data-action="password"]');
 
     usernameBtn.addEventListener("click", () => {
         usernameModal.classList.remove("hidden");
+    });
+    pictureBtn.addEventListener("click", () => {
+        pictureModal.classList.remove("hidden");
     });
     passwordBtn.addEventListener("click", () => {
         passwordModal.classList.remove("hidden");
@@ -61,21 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const updateUsernameForm = document.getElementById("updateUsernameForm");
-
-updateUsernameForm.addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(updateUsernameForm);
-    const res = await fetch("/profile", {
-        method: "POST",
-        body: formData
+const handleForm = (formId, url) => {
+    const form = document.getElementById(formId);
+    form.addEventListener("submit", async e => {
+        e.preventDefault();
+        const res = await fetch(url, { method: "POST", body: new FormData(form) });
+        const data = await res.json();
+        alert(data.message);
+        if (data.success) window.location.reload();
     });
-    const data = await res.json();
+};
 
-    alert(data.message);
-
-    if (data.success) {
-        window.location.reload();
-    }
-});
+handleForm("updateUsernameForm", "/update_username");
+handleForm("updatePictureForm", "/update_picture");

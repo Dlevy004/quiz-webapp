@@ -1,5 +1,6 @@
 from flask_login import current_user
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileAllowed, FileField
 from quizapp.models import User
 from wtforms import BooleanField, PasswordField, StringField, SubmitField, ValidationError
 from wtforms.validators import DataRequired, Length
@@ -37,4 +38,9 @@ class UpdateUsernameForm(FlaskForm):
             user = User.query.filter_by(username=username.data).first()
             if user:
                 raise ValidationError('A megadott felhasználónév foglalt!')
+    submit = SubmitField('Mentés')
+
+
+class UpdatePictureForm(FlaskForm):
+    picture = FileField(validators=[FileAllowed(['jpg', 'jpeg', 'png', 'webp', 'svg'])])
     submit = SubmitField('Mentés')
