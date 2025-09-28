@@ -12,6 +12,7 @@ class Word(db.Model):
     en = db.Column(db.Text, nullable=False)   # angol szó
     part_of_speech = db.Column(db.String(32)) # opcionális (ige, főnév stb.)
     tags = db.Column(db.Text)                 # pl: "A1,food"
+    level = db.Column(db.String(10), nullable=False, default="easy")
 
     def __repr__(self):
         return f"<Word {self.hu} - {self.en}>"

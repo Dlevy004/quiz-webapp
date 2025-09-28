@@ -12,12 +12,13 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-from quizapp import models_quiz  # noqa: F401
+from quizapp import models_quiz
 
 with app.app_context():
     db.create_all()
 
 from quizapp.routes_quiz import bp as quiz_bp
 app.register_blueprint(quiz_bp)
+
 
 from quizapp import routes

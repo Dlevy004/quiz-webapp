@@ -111,10 +111,7 @@ def update_picture():
     return jsonify({"success": False, "message": "\n".join(errors)})
 
 
-from flask_login import login_required
-
 @app.route("/quiz")
 @login_required
 def quiz_page():
-    # templates/quiz.html fog renderelődni
     return render_template("quiz.html")

@@ -4,6 +4,12 @@ logoutBtn.addEventListener('click', () => {
     window.location.href = '/logout';
 });
 
+const quizBtn = document.querySelector('.quiz-btn');
+
+quizBtn.addEventListener('click', () => {
+    window.location.href = '/quiz';
+});
+
 /*Cookie Panel*/
 const cookiePanel = document.querySelector('.cookie-panel');
 const acceptBtn = document.querySelector('#acceptBtn');
