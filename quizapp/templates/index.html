@@ -16,6 +16,24 @@
 </head>
 
 <body>
+    <dialog class="cookie-panel" aria-labelledby="CookieTitle">
+        <header>
+            <img src="{{ url_for('static', filename='images/cookie_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg') }}" alt="Süti ikon">
+            <h2>Cookie tájékoztató</h2>
+        </header>
+
+        <div class="data">
+            <p>
+                Az oldal a jobb felhasználói élmény érdekében sütiket használ.
+            </p>
+        </div>
+
+        <div class="cookie-btns">
+            <button class="button" aria-label="Sütik elfogadása" id="acceptBtn">Elfogad</button>
+            <button class="button" aria-label="Sütik elutasítása" id="rejectBtn">Elutasít</button>
+        </div>
+    </dialog>
+
     <header>
         <nav aria-label="Fő navigáció">
             <img src="{{ url_for('static', filename='images/yellowQ.avif') }}" alt="Quizzy logo" loading="lazy">
