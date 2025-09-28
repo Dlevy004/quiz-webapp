@@ -109,3 +109,12 @@ def update_picture():
 
     errors = [err for field_errors in form.errors.values() for err in field_errors]
     return jsonify({"success": False, "message": "\n".join(errors)})
+
+
+from flask_login import login_required
+
+@app.route("/quiz")
+@login_required
+def quiz_page():
+    # templates/quiz.html fog renderelődni
+    return render_template("quiz.html")
