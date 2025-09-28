@@ -1,0 +1,53 @@
+<!doctype html><html lang="hu"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Szókincs kvíz</title>
+<style>
+ body{font-family:system-ui,Arial;margin:24px} .card{border:1px solid #ddd;border-radius:12px;padding:16px;max-width:640px}
+ .choices button{display:block;width:100%;margin:8px 0;padding:12px;border-radius:10px;border:1px solid #ccc;background:#fff;cursor:pointer}
+ .choices button:hover{box-shadow:0 2px 10px rgba(0,0,0,.08)} .toolbar{display:flex;gap:8px;margin-bottom:16px}
+ .badge{font-size:12px;border:1px solid #aaa;padding:2px 8px;border-radius:999px}
+</style></head><body>
+<h1>Szókincs kvíz</h1>
+<div class="toolbar">
+  <button id="huen">HU → EN</button><button id="enhu">EN → HU</button>
+  <button id="easy">Könnyű</button><button id="medium">Közepes</button><button id="hard">Nehéz</button>
+  <span class="badge" id="badge"></span><span class="badge" id="levelBadge"></span>
+</div>
+<div id="root" class="card">Betöltés…</div>
+<script>
+let quiz=null,index=0,answers=[],itemStart=0,currentDirection='HU_EN',selectedLevel=null;
+document.getElementById('huen').onclick=()=>{currentDirection='HU_EN';reload()};
+document.getElementById('enhu').onclick=()=>{currentDirection='EN_HU';reload()};
+document.getElementById('easy').onclick=()=>{selectedLevel='easy';reload()};
+document.getElementById('medium').onclick=()=>{selectedLevel='medium';reload()};
+document.getElementById('hard').onclick=()=>{selectedLevel='hard';reload()};
+function reload(){loadQuiz(currentDirection)}
+async function loadQuiz(direction='HU_EN'){
+  document.getElementById('badge').textContent=direction==='HU_EN'?'Magyar → Angol':'Angol → Magyar';
+  document.getElementById('levelBadge').textContent=selectedLevel?`Szint: ${selectedLevel}`:'Szint: vegyes';
+  document.getElementById('root').textContent='Betöltés…'; answers=[]; index=0;
+  const p=new URLSearchParams({direction,limit:'10'}); if(selectedLevel) p.set('level',selectedLevel);
+  const res=await fetch(`/api/quiz?${p.toString()}`); if(!res.ok){document.getElementById('root').textContent='Hiba a kvíz betöltésekor.';return}
+  quiz=await res.json(); renderItem();
+}
+function renderItem(){
+  const root=document.getElementById('root'); const item=quiz.items[index]; if(!item) return;
+  root.innerHTML=`<div class="meta">Kérdés ${index+1}/${quiz.items.length}</div>
+    <h2 style="margin:8px 0 16px 0">${item.prompt}</h2>
+    <div class="choices">${item.choices.map((c,i)=>`<button data-i="${i}">${c}</button>`).join('')}</div>`;
+  itemStart=performance.now(); root.querySelectorAll('button[data-i]').forEach(btn=>btn.onclick=()=>choose(parseInt(btn.dataset.i,10)));
+}
+function choose(chosenIndex){
+  const timeMs=Math.round(performance.now()-itemStart);
+  answers.push({itemId:quiz.items[index].id,chosenIndex,timeMs});
+  if(index<quiz.items.length-1){index++;renderItem()} else {finish()}
+}
+async function finish(){
+  const root=document.getElementById('root'); root.textContent='Eredmény küldése…';
+  const res=await fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({quizId:quiz.id,answers})});
+  if(!res.ok){root.textContent='Hiba a beküldés során.';return}
+  const r=await res.json(); root.innerHTML=`<h2>Kész!</h2><p>Pontszám: <b>${r.score}%</b> (${r.correctCount}/${r.total})</p>
+    <button onclick="reload()">Új kvíz</button>`;
+}
+loadQuiz();
+</script></body></html>
