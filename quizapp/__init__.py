@@ -12,12 +12,12 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-# --- ÚJ: importáld a kvíz modelleket, hogy a táblák létrejöjjenek
 from quizapp import models_quiz  # noqa: F401
 
-# --- ÚJ: hozd létre a táblákat induláskor
 with app.app_context():
     db.create_all()
 
-# meglévő route-ok betöltése
-from quizapp import routes  # ez marad
+from quizapp.routes_quiz import bp as quiz_bp
+app.register_blueprint(quiz_bp)
+
+from quizapp import routes
