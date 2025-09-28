@@ -12,14 +12,14 @@
 1. **set FLASK_APP=quizapp.py**
 2. **flask run**
 
-## Ha valami gond lenne a db-vel, így lehet resetelni, ha nem muszáj ezt ne csináljuk inkább:
+## Lokális DB elkészítése:
 
 1. cmd-ben nyitunk egy python interpretert: **python**
 2. **from quizapp import app, db**
 3. **app.app_context().push()**
 4. **db.create_all()**
 
-## Tesztelni így lehet a db-t, ez igazából csak magamnak kellett
+## Tesztelni így lehet a db-t python interpreterből
 1. python interpreter: **python**
 2. **from quizapp import app,db**
 3. **app.app_context().push()**
