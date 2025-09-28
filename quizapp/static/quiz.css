@@ -1,0 +1,167 @@
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Lemon', sans-serif;
+    --primary-color: #fbac0f;
+    --secondary-color: #faebd7;
+    --ternary-color: #333;
+    --card-bg: #fff;
+    --badge-bg: #faebd7;
+    --badge-color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--secondary-color);
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--secondary-font);
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.toolbar .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.toolbar .buttons button {
+    background-color: var(--primary-color);
+    color: var(--ternary-color);
+    font-weight: bold;
+    border: 2px solid var(--ternary-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toolbar .buttons button:hover,
+.toolbar .buttons button:focus,
+.toolbar .buttons button:active {
+    background-color: rgba(251,172,15,0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Badges */
+.toolbar .badges {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;  /* nagyobb padding */
+    border-radius: 12px;
+    background-color: var(--badge-bg);
+    color: var(--badge-color);
+    font-weight: bold;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Quiz card */
+#root.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 640px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Question meta */
+.meta {
+    font-size: 0.9rem;
+    color: var(--ternary-color);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    margin: 0.5rem 0 1rem 0;
+}
+
+/* Choices buttons */
+.choices button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.choices button:hover,
+.choices button:focus,
+.choices button:active {
+    background-color: var(--primary-color);
+    color: var(--card-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .toolbar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .toolbar .badges {
+        margin-top: 0;
+    }
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.home-button button {
+    background-color: var(--primary-color);
+    color: var(--ternary-color);
+    font-weight: bold;
+    border: 2px solid var(--ternary-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.home-button button:hover,
+.home-button button:focus,
+.home-button button:active {
+    background-color: rgba(251,172,15,0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

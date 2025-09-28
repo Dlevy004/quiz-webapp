@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
   <title>Szókincs kvíz</title>
   <style>
     body {
@@ -50,10 +51,22 @@
 
 <body>
   <h1>Szókincs kvíz</h1>
+  <div class="home-button">
+    <button onclick="window.location.href='/index'">Főoldal</button>
+  </div>
+
   <div class="toolbar">
-    <button id="huen">HU → EN</button><button id="enhu">EN → HU</button>
-    <button id="easy">Könnyű</button><button id="medium">Közepes</button><button id="hard">Nehéz</button>
-    <span class="badge" id="badge"></span><span class="badge" id="levelBadge"></span>
+      <div class="buttons">
+          <button id="huen">HU → EN</button>
+          <button id="enhu">EN → HU</button>
+          <button id="easy">Könnyű</button>
+          <button id="medium">Közepes</button>
+          <button id="hard">Nehéz</button>
+      </div>
+      <div class="badges">
+          <span class="badge" id="badge"></span>
+          <span class="badge" id="levelBadge"></span>
+      </div>
   </div>
   <div id="root" class="card">Betöltés…</div>
   <script>
