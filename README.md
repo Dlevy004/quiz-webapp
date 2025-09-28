@@ -17,7 +17,8 @@
 1. cmd-ben nyitunk egy python interpretert: **python**
 2. **from quizapp import app, db**
 3. **app.app_context().push()**
-4. **db.create_all()**
+4. **db.drop_all()**
+5. **db.create_all()**
 
 ## Tesztelni így lehet a db-t python interpreterből
 1. python interpreter: **python**
