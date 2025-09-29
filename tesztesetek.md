@@ -111,6 +111,7 @@
 | Profilkép változtatás - érvényes          | Támogatott fájlformátum       | Sikeres módosítás             | Sikeres |
 
 
+## Kvíz UI – /quiz oldal
 
 | Leírás                                    | Lépés                         | Várt eredmény                                | Állapot |
 |-------------------------------------------|-------------------------------|----------------------------------------------|---------|
