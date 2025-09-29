@@ -109,3 +109,20 @@
 | Felhasználónév változtatás - érvényes     | Szabad név megadása           | Sikeres módosítás             | Sikeres |
 | Profilkép változtatás - formátum hiba     | Nem támogatott fájlformátum   | Hibaüzenet                    | Sikeres |
 | Profilkép változtatás - érvényes          | Támogatott fájlformátum       | Sikeres módosítás             | Sikeres |
+
+
+
+| Leírás                                    | Lépés                         | Várt eredmény                                | Állapot |
+|-------------------------------------------|-------------------------------|----------------------------------------------|---------|
+| Oldal védett (login szükséges)            | Kijelentkezve nyisd meg         | Átirányítás a /auth (login) oldalra                  | Sikeres |
+| Oldal betöltése                           | Jelentkezz be → nyisd meg       | Kártya betölt, majd megjelenik az 1. kérdés          | Sikeres |
+| Irány: HU→EN                              | HU → EN gombra katt             | Prompt magyar, válaszok angolul                      | Sikeres |
+| Irány: EN→HU                              | EN → HU gombra katt             | Prompt angol, válaszok magyarul                      | Sikeres |
+| Szint: Könnyű                             | „Könnyű” gombra katt            | Csak „easy” szavakból generál                        | Sikeres |
+| Szint: Közepes                            | „Közepes” gombra katt           | Csak „medium” szavakból generál                      | Sikeres |
+| Szint: Nehéz                              | „Nehéz” gombra katt             | Csak „hard” szavakból generál                        | Sikeres |
+| Válasz kiválasztása                       | Katt egy opcióra                | Következő kérdésre lép, idő mérve                    | Sikeres |
+| Kvíz lezárás                              | Válaszolj végig (10 kérdés)     | Összesítés: „Pontszám: X% (Y/10)” + „Új kvíz” gomb   | Sikeres |
+| Új kvíz                                   | „Új kvíz” gomb                  | Új kérdéssor (más kérdés ID-k)                       | Sikeres |
+| Hiba kezelés – betöltés                   | Állítsd le a szervert, frissíts | „Hiba a kvíz betöltésekor.” üzenet látszik           | Sikeres |
+| Reszponzív                                | 320/768/1024 px szélesség       |Elrendezés nem csúszik szét, gombok jól kattinthatók  | Sikeres |
